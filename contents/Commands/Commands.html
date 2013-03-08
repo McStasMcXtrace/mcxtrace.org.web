@@ -1,0 +1,32 @@
+
+			<a name="McXTrace_Commands" id="McXTrace_Commands"></a><h1> <span class="mw-headline">McXTrace Commands</span></h1>
+<p>This is a list of the main commands/binaries that the McXtrace install on your system
+</p>
+<dl><pre><strong>mxgui
+</strong></pre><dd> starts the McXtrace GUI
+</dd></dl>
+<dl><pre><strong>mcxtrace a.instr
+</strong></pre><dd> interpret the instrument file <code>a.instr</code> and output a complete c-program in the file a.c
+</dd></dl>
+<dl><pre><strong>mxrun a.instr
+</strong></pre><dd> This utility script does a number of things:
+</dd><dd>1. Check if the file <i>a.out</i> does not exist or is older than <i>a.instr</i>.
+</dd><dd>If this is the case: 
+</dd><dd>1.1 Run <i>mcxtrace</i> on <i>a.instr</i> to produce <i>a.c</i>
+</dd><dd>1.2 Compile <i>a.c</i> to <i>a.out</i> using the c-compiler of choice
+</dd><dd>2. Run the simulation using 10^6 virtual photons, and prompts the user for input values
+</dd></dl>
+<dl><pre><strong>mxrun a.instr par1=12
+</strong></pre><dd>Similar but sets the value of input parameter <i>par1</i> to <i>12</i> and uses the default values for other input parameter. I.e. it does <i>not</i> prompt the user for any more input parameters.
+</dd></dl>
+<dl><pre><strong>mxplot
+</strong></pre><dd>Show a dynamic overview plot of the monitors in the working directory
+</dd><pre><strong>mxplot dir
+</strong></pre><dd>Show overview plot of data in directory <i>dir</i>
+</dd></dl>
+<dl><pre><strong>mxdisplay a.instr
+</strong></pre><dd> Similar to mxrun but do visual tracing of 10^6 photons (a very high number) using the default plotting backend (usually pgplot).
+</dd><pre><strong> mxdisplay --format=MATLAB a.instr
+</strong></pre><dd> Do visual tracing using the Matlab backend (if present)
+</dd></dl>
+
