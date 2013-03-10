@@ -58,9 +58,9 @@
 </p>
 <hr />
 <a name="General_Unix" id="General_Unix"></a><h2> <span class="mw-headline">General Unix</span></h2>
-<p>Unpack the tarball, move into the build directory (e.g. <tt>cd mcxtrace-1.0</tt>, and do the following to install mcxtrace in its default location ( <tt>/usr/local</tt> ):
+<p>Unpack the tarball, move into the build directory (e.g. <tt>cd mcxtrace-1.1rc1b-src-64</tt>, and do the following to install the mcxtrace kernel in its default location ( <tt>/usr/local</tt> ):
 </p>
-<pre>./configure --enable-mcxtrace
+<pre>cmake .
 make;
 make install;
 </pre>
@@ -68,23 +68,8 @@ make install;
 </p>
 <pre>sudo make install
 </pre>
-<p>instead or specify a different install location during the <i>configure</i> step, e.g. <tt>--prefix=/tmp</tt>. Please note that the default behaviour is to put the executable files in <tt>prefix/bin/</tt>. Thus you should make sure this directory is in your <tt>PATH</tt>-variable.
-</p><p>A bug has been found when installing to a non-standard location: <a href="http://trac.mccode.org/ticket/52" class="external autonumber" title="http://trac.mccode.org/ticket/52" rel="nofollow">[1]</a>. Please download and apply the patch. To apply a patchfile do something similar to:
-</p>
-<pre>patch -p1 &lt; patchfile.patch
-</pre>
-<p>in your build directory. If successful the shell should return something like
-</p>
-<pre>patching file src/Makefile.in
-patching file src/mcdaemon.pl
-patching file src/mcdisplay.pl
-patching file src/mcdoc.pl
-patching file src/mcformatgui.pl
-patching file src/mcplot.pl
-patching file src/mcresplot.pl
-patching file src/mcrun.pl
-patching file src/mxgui.pl
-</pre>
+<p>instead or specify a different install location during the <i>cmake</i> step, e.g. <tt>-DCMAKE_INSTALL_PREFIX=/tmp</tt>. Please note that the default behaviour is to put the executable files in <tt>CMAKE_INSTALL_PREFIX/bin/</tt>. Thus you should make sure this directory is in your <tt>PATH</tt>-variable.
+
 <a name="Ubuntu_11.10" id="Ubuntu_11.10"></a><h2> <span class="mw-headline">Ubuntu 11.10</span></h2>
 <p>Unfortunately the perl-pgplot which is shipped with ubuntu 11.10 has problems. To remedy this and get plotting working you need to install some extra packages and rebuild perl-pgplot from source. First do 
 </p>
