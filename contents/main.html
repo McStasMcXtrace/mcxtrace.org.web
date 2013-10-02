@@ -30,6 +30,14 @@
 <a name="McXtrace_News" id="McXtrace_News"></a><h2> <span class="mw-headline"> McXtrace News </span></h2>
 The latest McXtrace news.
 
+<a name="Patch released" id="numpars_patch"></a><h3> <span class="mw-headline">bugfix patch</span></h3>
+We have found a rather serious bug (thank's Carsten) in McXtrace which made the the <pre>SPLIT</pre> keyword generate rubbish photons. A patch file is available here <a href="http://download.mcxtrace.org/mcxtrace-1.0_num_pars.patch">mcxtrace-1.0_num_pars.patch</a>. To apply it do something along the lines.
+<pre>
+        cd /usr/local/lib/mcxtrace-1.0
+        patch -p1 < /path/to/file/mcxtrace-1.0_num_pars.patch
+</pre>
+if you have the patch utility available. N.b. this is fixed upstream.
+
 <a name="McXtrace 1.1 released" id="McXtrace-1.1"></a><h3><span class="mw-headline">McXtrace 1.1 Released</span></h3>
 We are extremely happy to announce the release of McXtrace 1.1  Just in time for the 3-Codes workshop. This release is based on the well known perl tools while we are testing new solutions for python based plotting tools. Please head over to the download area to get your copy. Happy simulating!
 
