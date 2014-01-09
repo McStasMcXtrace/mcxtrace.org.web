@@ -137,7 +137,7 @@ Try out the online component documentation by selecting Help/Component Library i
 
 </ol>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-1.2">1.2</a> Monitor the inserted source model
+<a class="toc" name="toc-Subsection-1.2">1.2</a> Monitor the inserted source model
 </h2>
 <ol>
 <li>
@@ -184,7 +184,7 @@ Optimize your simulation using directional sampling. Add the parameters <i>focus
 
 </ol>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-1.3">1.3</a> Insert a CRL-stack.
+<a class="toc" name="toc-Subsection-1.3">1.3</a> Insert a CRL-stack.
 </h2>
 <div class="Standard">
 The first stack should be a set of 16 parabolic Be lenses to set the focus at 10 m downstream of the source, the second stack a set of 16 Al lenses. Use <tt>Lens_parab</tt> to set a Be CRL-stack 31.5 m downstream from the source, with the following parameters:
@@ -244,7 +244,7 @@ Separation between lenses
 
 </div>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-1.4">1.4</a> Verify that the focus is where you expect
+<a class="toc" name="toc-Subsection-1.4">1.4</a> Verify that the focus is where you expect
 </h2>
 <ol>
 <li>
@@ -256,7 +256,7 @@ Use the lens stack together with a slit (<tt>Slit</tt>) as a low resolution mono
 
 </ol>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-1.5">1.5</a> Visually trace photons through the beamline.
+<a class="toc" name="toc-Subsection-1.5">1.5</a> Visually trace photons through the beamline.
 </h2>
 <div class="Standard">
 Use mxdisplay to try and visually track photons through the beamline model. In the GUI this is done by selecting &ldquo;Trace&rdquo; instead of simulate in the run window. You will need to zoom in a lot to see the CRLs clearly. You should be able to saee something like figure <a class="Reference" href="#fig:ray_tracing_CRL">5↓</a> below.
@@ -278,7 +278,7 @@ Figure 5 Visual ray tracing through a CRL stack.
 
 </div>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-1.6">1.6</a> Insert the Al stack of lenses<a class="Label" name="sub:Insert-the-Al"> </a>
+<a class="toc" name="toc-Subsection-1.6">1.6</a> Insert the Al stack of lenses<a class="Label" name="sub:Insert-the-Al"> </a>
 </h2>
 <ol>
 <li>
@@ -347,13 +347,13 @@ How would you make McXtrace dynamically switch between CRL-stacks based on an in
 
 </ol>
 <h1 class="Section">
-<a class="toc" name="toc-Section-2">2</a> Coherence/Slit interference
+<a class="toc" name="toc-Section-2">2</a> Coherence/Slit interference
 </h1>
 <div class="Standard">
 We shall now turn our attention to tracking the phase of a wavefront decontructed into rays. What we will do is trace rays, emitted from a fully coherent point source through first a single slit, then a double slit arrangement. 
 </div>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-2.1">2.1</a> Single slit diffraction
+<a class="toc" name="toc-Subsection-2.1">2.1</a> Single slit diffraction
 </h2>
 <ol>
 <li>
@@ -368,7 +368,7 @@ What do you see? Is this what you expect?
 
 </ol>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-2.2">2.2</a> Double slit diffraction
+<a class="toc" name="toc-Subsection-2.2">2.2</a> Double slit diffraction
 </h2>
 <ol>
 <li>
@@ -392,13 +392,13 @@ Looking back to section <a class="Reference" href="#sub:Insert-the-Al">1.6↑</a
 
 </ol>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-2.3">2.3</a> Coherent propagation through CRLs
+<a class="toc" name="toc-Subsection-2.3">2.3</a> Coherent propagation through CRLs
 </h2>
 <div class="Standard">
 Start with the example instrument NSLS2_CHX, and modify the monitors to also take the phase of the beam into account. Are the statistics of the results sufficient? If not, increase the statistics, if possible through parallelization. Try to modify the setup to get 1D vertical and horizontal cuts on the coherent monitors. An example is given in NSLS_CHX_coh.instr in the workshop mcxtrace tutorial file bundle. 
 </div>
 <h1 class="Section">
-<a class="toc" name="toc-Section-3">3</a> Kirkpatrick-Baez focusing
+<a class="toc" name="toc-Section-3">3</a> Kirkpatrick-Baez focusing
 </h1>
 <div class="Standard">
 The aim of this exercise is to build a Kirkpatrick Baez focusing system in McXtrace. We will use a single curving mirror model, <tt>Mirror_curved</tt>, to focus the beam in the same manner as exercise 1, i.e. focus the beam at a pt 10 m downstream from the focusing system at 31.5 m downstream from the source.
@@ -410,7 +410,7 @@ The aim of this exercise is to build a Kirkpatrick Baez focusing system in McXtr
 Verify that your focus plane is where it should be, for instance by scanning a monitor along the optical axis of the beam.
 </div>
 <h1 class="Section">
-<a class="toc" name="toc-Section-4">4</a> SHADOW-McXtrace interoperation
+<a class="toc" name="toc-Section-4">4</a> SHADOW-McXtrace interoperation
 </h1>
 <div class="Standard">
 Starting with a shadow simulation of a wiggler. Use the McXtrace to inject that into the McXtrace simulation from section<a class="Reference" href="#sub:Insert-the-Al">1.6↑</a>.
@@ -425,7 +425,7 @@ How would you improve statistics?
 
 </ol>
 <h1 class="Section">
-<a class="toc" name="toc-Section-5">5</a> Double Crystal Monochromator
+<a class="toc" name="toc-Section-5">5</a> Double Crystal Monochromator
 </h1>
 <div class="Standard">
 The general idea is inspired by the setup planned for the european XFEL FXE beamline in Hamburg, in that we wish to simulate a pseudo channel-cut double bounce crystal monochromator.
@@ -452,7 +452,7 @@ In McXtrace the default is to move sequentially from component to component in t
 
 </ol>
 <h1 class="Section">
-<a class="toc" name="toc-Section-6">6</a> Time of Flight simulation.
+<a class="toc" name="toc-Section-6">6</a> Time of Flight simulation.
 </h1>
 <div class="Standard">
 We will in this example use a disordered sample model in conjunction with a simple Chopper model to simulate a generic &ldquo;Pump-and-Probe&rdquo; experiment.
@@ -476,7 +476,7 @@ Simulate scattered signals while varying the time-delay between the excitation t
 
 </ol>
 <h1 class="Section">
-<a class="toc" name="toc-Section-7">7</a> Write your own component
+<a class="toc" name="toc-Section-7">7</a> Write your own component
 </h1>
 <div class="Standard">
 Get coffee, lean back and watch the tutorial :-)
