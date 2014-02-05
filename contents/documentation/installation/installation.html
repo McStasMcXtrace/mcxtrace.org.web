@@ -4,12 +4,17 @@
 </p>
 <a name="Debian.2FUbuntu_class_Linux_systems" id="Debian.2FUbuntu_class_Linux_systems"></a><h2> <span class="mw-headline">Debian/Ubuntu class Linux systems</span></h2>
 <p>The simplest and most standard way to install McXtrace on a debian/ubuntu type systems is to download the file mcxtrace-1.1-deb-(64|32).tgz, unpack and install then .deb file contained therein using the package manager dpkg.
-For instance, on a 32 bit system, download the file mcxtrace-1.1-deb-32.tgz. As of release 1.1 McXtrace is split into several packages. TO get McXtrace working in its traditional form (with the perl based GUI and other tools) please install the .deb file in the following manner:
+For instance, on a 32 bit system, download the file mcxtrace-1.1-deb-32.tgz. As
+of release 1.1 McXtrace is split into several packages. To get McXtrace working
+in its traditional form (with the <a href="www.perl.org">perl</a> based GUI and other tools) please
+install the .deb file in the following manner and order:
 </p>
 <pre>sudo dpkg --install mcxtrace-1.1-32.deb</pre>
 <pre>sudo dpkg --install mcxtrace-comps-1.1-32.deb</pre>
 <pre>sudo dpkg --install mcxtrace-tools-perl-1.1-32.deb</pre>
 Also included in the tarball are new (experimental) versions of mxrun, mxdisplay, and mxplot built using Python which offer additional features. Furthermore we also supply copies of supporting packages e.g. Pgplot for simple installation.
+To use the GUI and mcrun scripts etc. you <i>do</i> need a <i>perl</i>, and/or <i>python</i>-interpreter installed. They are usually readily installable from your packaging system. For instance:
+<pre>sudo apt-get install perl</pre>
 
 <a name="Mac_OSX" id="Mac_OSX"></a><h2> <span class="mw-headline">Mac OSX</span></h2>
 <p>instructions coming soon
@@ -21,4 +26,6 @@ Unzip it and then run the executable installers in the order:
   <li>mcxtrace-comps-1.1-NSIS-mingwXX.exe</li>
   <li>mcxtrace-tools-perl-1.1-NSIS-mingwXX.exe</li>
 </ol>
+<i>Perl</i> is not shipped with regular winddows installations, nor is python. We recommend using <a href="www.strawberryperl.com">strawberry perl</a>, which also includes a c-compiler. The 5.18 version has been tested to work for most windows system. Please note that perl should be installed prior to installation of the mcxtrace-tools-perl package. The installation process gathers a few extra perl modules (such as PDL) and installs in the perl site directory.
+
 <p>For installation from source code or directly from the development tree, see <a href="Installation-suppl.html">this page</a>
