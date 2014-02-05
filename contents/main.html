@@ -30,6 +30,9 @@
 <a name="McXtrace_News" id="McXtrace_News"></a><h2> <span class="mw-headline"> McXtrace News </span></h2>
 The latest McXtrace news.
 
+<a name="Perl_inst_prob"></a><h3> <span class="mw-headline">Perl related installation problem on windows</span></h3>
+We have lately found that in a few rare cases, there is a problem with the perl tools installation process on Windows 7. If the extra ppds cannot be gathered by the installation script it might be caused by a permission issue in the perl site directory. If you encounter some problem along these lines please make sure that actually have <b>Full control</b>-permissions over the perl directory and its subdirectories. If that didnø't help pleasde donø't hesitate to use the mailing list (or indeed the facebook page)
+
 <a name="Patch released" id="numpars_patch"></a><h3> <span class="mw-headline">bugfix patch</span></h3>
 We have found a rather serious bug (thank's Carsten) in McXtrace which made the the <pre>SPLIT</pre> keyword generate rubbish photons. A patch file is available here <a href="http://download.mcxtrace.org/mcxtrace-1.0_num_pars.patch">mcxtrace-1.0_num_pars.patch</a>. To apply it do something along the lines.
 <pre>
