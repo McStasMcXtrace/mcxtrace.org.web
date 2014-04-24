@@ -142,7 +142,7 @@ Try out the online component documentation by selecting Help/Component Library i
 <ol>
 <li>
 Insert a 2D-monitor, and an energy spectrum monitor at the CRL-stack position 31.5 m downstream from the source. In our example this translates to a position of (0,0,31.5) in McXtrace coordinates. Use the components <tt>PSD_monitor</tt> and <tt>E_monitor</tt> to accomplish this. Contrary to other McXtrace components, a Monitor may reside on top of another component, if the <tt>restore_xray</tt> parameter is nonzero.<div class="Standard">
-  Be sure to make the monitor large enough to catch the full beam footprint. Also, please give a <i>filename</i> to each of the monitors. This is where your monitor data will be put. If none is given, the data are simply dicarded and only the integrated intensity signal of the monitor is reported. 
+  Be sure to make the monitor large enough to catch the full beam footprint. Also, please <i>set</i> the optional <tt>filename</tt> parameter in each of the monitors. This is where your monitor data will be put. If none is given, the data are simply dicarded and only the integrated intensity signal of the monitor is reported. 
   Run a simulation to get the beam footprint and spectrum at the CRL-stack position, by pressing the &ldquo;Run&rdquo;-button. This should now open a new window with boxes for the defined input parameters of the beamline file:<div class="float">
 <a class="Label" name="Figure-3"> </a><div class="figure" style="max-width: 45%;">
 <div class="center">
