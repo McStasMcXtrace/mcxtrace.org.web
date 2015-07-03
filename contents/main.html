@@ -11,13 +11,13 @@
   </td>
 </tr>
 </table>
-<p> <i>This site is undergoing reorganization. Inconsistencies and broken links may occur. Please do report any findings to erkn_AT_fysik.dtu.dk if you have the time. Thanks in advance.</i>
+<p> 
 
 
 <p></span>
 </p><p>Funding from NABIIT, <a href="http://fi.dk/raad-og-udvalg/det-strategiske-forskningsraad" class="external text" title="http://fi.dk/raad-og-udvalg/det-strategiske-forskningsraad" rel="nofollow">DSF</a> and the above parties.
 </p><p>Our code is based on technology from <a href="http://www.mcstas.org" class="external text" title="http://www.mcstas.org" rel="nofollow"><img src="/files/mcstas_logo_thumb.png" alt="mcstas_logo_thumb.png" /></a>.
-</p><p>Code repository (shared with 'McStas') is located at <a href="http://trac.mccode.org" class="external text" title="http://trac.mccode.org" rel="nofollow">trac.mccode.org</a>
+</p><p>Code repository (shared with 'McStas') is located at <a href="https://github.com/McStasMcXtrace" class="external text" title="http://github.com/McStasMcXtrace" rel="nofollow">github.com/McStasMcXtrace</a>
 </p><p>For information on our progress, please subscribe to our <a href="/List">user mailinglist</a>..
 </p>
 <ul><li> To download the latest release: <a href="http://download.mcxtrace.org" class="external text" title="http://download.mcxtrace.org" rel="nofollow">download area</a>
@@ -37,8 +37,10 @@ Packages are now bundled for easy installation. As of day one - packages are bui
     <li> Debian class GNU/Linux systems</li>
     <li> Rpm-based (e.g. RedHat) GNU/Linux systems</li>
     <li> Windows systems (including 7, 8, and 8.1)</li>
-    <li> Mac OSX 10.10 Yosemite and 10.9 Maverics</li>
+<!--    <li> Mac OSX 10.10 Yosemite and 10.9 Maverics</li>!-->
 </ul>
+
+Notably absent are builds for Mac OSX. These are in the pipeline and will be available as soon as some quirks are sorted out with the packaging tools.
 Packages for further platforms can be built upon request - forthcoming is also a FreeBSD port.
 
 Please report any problems that you may experience to the maintainer <a href="mailto:erkn_AT_fysik.dtu.dk"></a>. We will deal with all inconveniences ASAP.
@@ -50,6 +52,11 @@ Other new features in 1.2 include
     <li> Absorption feature added to Moelcule_2stata sample</li>
     <li> Several more examples and test instruments</li>
 </ul> 
+
+<a name="McCode on GitHub"></a><h3> McCode goes github</h3>
+The McCode-team is happy to announce that we have now moved to using git for version control and consequently also moved the code repository to
+GitHub. Effective immediately McXtrace (and McStas) code will live on <a href="https://github.com/McStasMcXtrace" class="external text" title="http://github.com/McStasMcXtrace" rel="nofollow">github.com/McStasMcXtrace</a>.
+To get a snapshot of the code you may issue the command: git clone git@github.com:McStasMcXtrace/McCode.git, provided you have a github account.
 
 <a name="Perl_inst_prob"></a><h3> <span class="mw-headline">Perl related installation problem on windows</span></h3>
 We have lately found that in a few rare cases, there is a problem with the perl tools installation process on Windows 7. If the extra ppds cannot be gathered by the installation script it might be caused by a permission issue in the perl site directory. If you encounter some problem along these lines please make sure that actually have <b>Full control</b>-permissions over the perl directory and its subdirectories. If that didnø't help pleasde donø't hesitate to use the mailing list (or indeed the facebook page)
