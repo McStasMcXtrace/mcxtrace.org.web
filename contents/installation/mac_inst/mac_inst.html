@@ -1,12 +1,17 @@
 <a name="Mac OSX Installation" id="Mac_OSX"></a><h2>Mac OSX Installation Instructions</h2>
 
-To install McXtrac on a computer running Mac OSX you first need to install XCode from the App store (or installation medium)
-You must also install Command Line tools inside Xcode (Xcode -> Preferences-> Downloads -> Components) and also allow installation of third 
-party software (System Preferences -> Security & Privacy -> General -> Allow applications downloaded from: Anywhere) - can be reset after the installation of the McXtrace bundle.
+To install McXtrace on a computer running Mac OSX you first need to 
+allow installation of third party software (System Preferences -> Security & Privacy -> General -> Allow applications downloaded from: Anywhere) - can be reset after the installation of the McXtrace bundle.
+You must also install XCode from the App store (or installation medium), and in particular the Xcode command line tools. For 10.9 or later these are included by defualt in the Xcode installation. 
+For the purpose of just running McXtrace
+ full installation of Xcode is not necessary. You may instead issue the command
+ <pre>sudo xcode-select --install</pre>
+ inside a terminal, to get only the Xcode command line tools.
 <p>
 
 You may furhter install either Intel C (commercial product) or the version of gcc available from http://hpc.sourceforge.net, as they both work much better than the Apple-provided llvm and llvm-gcc compilers.
 On MacOSX 10.8 and above (Mountain Lion, Mavericks), also install XQuartz (X11).
+If on Yosemite, there's an X.app in Applications->Utilities which will take you directly to the Xquartz-website<a href="http://xquartz.macosforge.org"></a>
 <p>
 
 Afterwards, unzip your downloaded McXtrace bundle corresponding to your version of Mac OS X (we currently provide packages for 10.9 Maverics and 10.10 Yosemite) and run it. We can of course generate packages
@@ -22,6 +27,42 @@ Apart from the dependencies mentioned above, the defaults of the installation bu
     <li>Tk widgets for Perl</li>
 </ul>
 
-<!--The installation procedure is shown in the images below. -->
+The installation procedure is shown in the images below.
 
+<p>
+When the installation process is started you are greeted with this screen:
+<img src="mac_osx_install_screensnap001.png"></img>
+</p>
+<p>
+The next step mentions the dependencies of McXtrace.
+<img src="mac_osx_install_screensnap002.png"></img>
+</p>
+<p>
+Thirdly, you are asked to read and accept the Gnu public License under which McXtrace is distributed.
+<img src="mac_osx_install_screensnap003.png"></img>
+</p>
+<p>
+<img src="mac_osx_install_screensnap004.png"></img>
+</p>
+<p>
+Next, you are asked to choose which additional modules (if any) to install. A minimal McXtrace installation 
+is already selected for you. Importantly - to enable running McXtrace in parallel using <a href="http://www.openmpi.org">openmpi</a>, check the box in front
+ of the mcxtrace-openmpi-1.2 module.
+<img src="mac_osx_install_screensnap005.png"></img>
+</p>
+<p>
+Lastly - you are asked to confirm that you really do want to install McXtrace.
+<img src="mac_osx_install_screensnap006.png"></img>
+</p>
+<p>
+If all goes well you should now see this screen.
+<img src="mac_osx_install_screensnap007.png"></img>
+</p>
 
+<h2>Troubleshooting</h2>
+<ul>
+    <li>
+        In case you, instead of the last screen, get an error message saying that packages could not be validated, please check that you have installed Xquartz.</li>
+    <li>
+        </li>
+</ul>
