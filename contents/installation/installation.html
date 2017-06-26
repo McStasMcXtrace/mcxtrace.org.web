@@ -1,6 +1,6 @@
 
 <a name="Installation_instructions_for_McXtrace" id="Installation_instructions_for_McXtrace"></a><h1> <span class="mw-headline"> Installation instructions for McXtrace </span></h1>
-<p>Below are listed instructions on how to install McXtrace on some of the supported platforms. For other platforms please use the source tarball distribution.
+<p>Below are listed instructions on how to install McXtrace on some of the supported platforms. For other platforms please use the source tarball distribution. 
 </p>
 <a name="Debian.2FUbuntu_class_Linux_systems" id="Debian.2FUbuntu_class_Linux_systems"></a><h2> <span class="mw-headline">Debian/Ubuntu class Linux systems</span></h2>
 <p> 
@@ -34,9 +34,48 @@ To avoid installing all of these packages individually it is possible to install
 <pre>
 apt-get install mcxtrace-suite-python
 </pre>
-The old perl-based tooæs are available, but we recommend you switch to the new python tools as the old tools are being decommissioned.
+The old perl-based tools are available, but we recommend you switch to the new python tools as the old tools are being decommissioned.
 
 Please report any problems with repository or installation to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>. We will do our utmost to help you.
 
+<a name="RedHat_class_Linux_systems" id="RedHat_class_Linux_systems"></a><h2> <span class="mw-headline">Red Hat class Linux systems</span></h2>
 
+McXtrace provides a package repository for use with RedHat-based distributions, such as RedHat, Fedora, CentOS and Scientific Linux. To allow automatic update of your mcxtrace, mcxtrace-components and tools when new revisions are relased, follow the below instruction.
+
+On RedHat class systems (including Scientific Linux, CentOS etc.):
+
+cd /etc/yum.repos.d
+sudo wget http://packages.mccode.org/rpm/mccode.repo
+sudo yum update
+
+This makes your system aware of the McXtrace packages:
+<pre>
+[mcxtrace@centos]$ yum search mcxtrace |grep -v 1.2 |grep -v 1.1
+Loaded plugins: security
+============================ N/S Matched: mcxtrace =============================
+mcxtrace-1.4.x86_64 : mcxtrace built using CMake
+mcxtrace-comps-1.4.x86_64 : mcxtrace-comps built using CMake
+mcxtrace-manuals-1.4.x86_64 : mcxtrace_manuals built using CMake
+mcxtrace-suite.x86_64 : A metapackage for McXtrace + perl and python tools
+mcxtrace-suite-perl.x86_64 : A metapackage for McXtrace + perl tools
+mcxtrace-suite-python.x86_64 : A metapackage for McXtrace + python tools
+mcxtrace-clustertools-1.4.x86_64 : perl-cluster-tools built using CMake
+mcxtrace-miniconda3-1.4.x86_64 : miniconda3 built using CMake
+mcxtrace-tools-matlab-mxplot-1.4.x86_64 : matlab-tools-mcplot built using CMake
+mcxtrace-tools-perl-1.4.x86_64 : legacy-tools built using CMake
+mcxtrace-tools-perl-cmdline-1.4.x86_64 : legacy-tools-cmdline built using CMake
+mcxtrace-tools-python-mccodelib-1.4.x86_64 : python-tools-mccodelib built using
+mcxtrace-tools-python-mxdisplay-webgl-1.4.x86_64 : python-tools-mcdisplay-webgl
+mcxtrace-tools-python-mxgui-1.4.x86_64 : python-tools-mcgui built using CMake
+mcxtrace-tools-python-mxplot-matplotlib-1.4.x86_64 : python-tools-mcplot built
+mcxtrace-tools-python-mxplot-pyqtgraph-1.4.x86_64 : python-tools-mcplot-pyqtgraph
+mcxtrace-tools-python-mxrun-1.4.x86_64 : python-tools-mcrun built using CMake
+</pre>
+
+Please note that our rpm-packages in the repo have been built using a centos7.2 machine. For older machines it may be preferrable to use a set of packages built on Scientific Linux 6.1. These may be found here:<a href="http://downloads.mcxtrace.org/mcxtrace-1.4/linux/mcxtrace-1.4-rpm64_ScientificLinux6.1/">Scientific Linux rpms.</a>
+
+Please report any problems with repository or installation to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>. We will do our utmost to help you.
+
+<a name="FreeBSD_systems" id="FreeBSD_systems"></a><h2> <span class="mw-headline">FreeBSD systems</span></h2>
+We will support FreeBSD systems through the native ports/package system. This will be made available shortly.
 
