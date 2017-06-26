@@ -11,33 +11,32 @@ cd /etc/apt/sources_list.d/
 wget http://packages.mccode.org/debian/mccode.list
 apt-get update
 </pre>
-and then do either of:
+
+This adds the mccode repository to the list of searched repositories:
 <pre>
-apt-get install mcxtrace-suite
-apt-get install mcxtrace-suite-perl
+mcxtrace@debian:~$ apt-cache search mcxtrace |grep 1.4
+mcxtrace-1.4 - mcxtrace built using CMake
+mcxtrace-clustertools-1.4 - perl-cluster-tools built using CMake
+mcxtrace-comps-1.4 - mcxtrace-comps built using CMake
+mcxtrace-manuals-1.4 - mcxtrace_manuals built using CMake
+mcxtrace-tools-matlab-mxplot-1.4 - matlab-tools-mcplot built using CMake
+mcxtrace-tools-perl-1.4 - legacy-tools built using CMake
+mcxtrace-tools-perl-cmdline-1.4 - legacy-tools-cmdline built using CMake
+mcxtrace-tools-python-mccodelib-1.4 - python-tools-mccodelib built using CMake
+mcxtrace-tools-python-mxdisplay-pyqtgraph-1.4 - python-tools-mcdisplay-pyqtgraph built using CMake
+mcxtrace-tools-python-mxdisplay-webgl-1.4 - python-tools-mcdisplay-webgl built using CMake
+mcxtrace-tools-python-mxgui-1.4 - python-tools-mcgui built using CMake
+mcxtrace-tools-python-mxplot-matplotlib-1.4 - python-tools-mcplot built using CMake
+mcxtrace-tools-python-mxplot-pyqtgraph-1.4 - python-tools-mcplot-pyqtgraph built using CMake
+mcxtrace-tools-python-mxrun-1.4 - python-tools-mcrun built using CMake
+</pre>
+To avoid installing all of these packages individually it is possible to install a meta-package wich includes a typical set of the above:
+<pre>
 apt-get install mcxtrace-suite-python
 </pre>
-<!--Debian testing users (or indeed Linux Mint Debian Edition) may require some extra packages that are not present in the standard debian repositories.
-E.g. If this is the case and you try to install  mcxtrace-suite-perl you will get an error message complaining about a missing <b>libtk-perl-codetext</b> package.
-To help fix these issues, we have packages some extra .deb files, which may be installed by doing:
-<pre>
-wget http://download.mcxtrace.org/mcxtrace-1.1-Debian-Testing-Extra.tgz
-tar xzf mcxtrace-1.1-Debian-Testing-Extra.tgz
-cd mcxtrace-1.1-Debian-Testing-Extra
-./install_extras
-</pre>
-after which you may run e.g. <pre>apt-get install mcxtrace-suite-perl</pre>
--->
-<p>If you prefer installing the .deb files manually, the simplest way is to download the file mcxtrace-1.2-deb-64.tgz, unpack it, and install then .deb files contained therein using the package manager dpkg.
-To get McXtrace working
-in its traditional form (with the <a href="www.perl.org">perl</a> based GUI and other tools) please
-install the .deb file in the following manner and order:
-</p>
-<pre>sudo dpkg --install mcxtrace-1.2-64.deb</pre>
-<pre>sudo dpkg --install mcxtrace-comps-1.2-64.deb</pre>
-<pre>sudo dpkg --install mcxtrace-tools-perl-1.2-64.deb</pre>
-Also included in the tarball are new (experimental) versions of mxrun, mxdisplay, and mxplot built using Python which offer additional features. Furthermore we also supply copies of supporting packages e.g. Pgplot for simple installation.
-To use the GUI and mcrun scripts etc. you <i>do</i> need a <i>perl</i>, and/or <i>python</i>-interpreter installed. They are usually readily installable from your packaging system. For instance:
-<pre>sudo apt-get install perl</pre>
+The old perl-based tooæs are available, but we recommend you switch to the new python tools as the old tools are being decommissioned.
 
-<p>For installation from source code or directly from the development tree, see <a href="Installation-suppl.html">this page</a>
+Please report any problems with repository or installation to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>. We will do our utmost to help you.
+
+
+
