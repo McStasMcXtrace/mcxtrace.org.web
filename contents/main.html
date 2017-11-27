@@ -32,13 +32,13 @@ The latest McXtrace news.
 <a name="McXtrace 1.4: workaround for a python issue on windows 10"</a> <h3> <span class="mw-headline">McXtrace 1.4: workaround for a python issue on windows 10</span></h3>
 A reported issue with McXtrace 1.4 and numpy has found a workaround.
 
-The procedure below has been reported to work, if when starting an McXtrace simiulation for the GUI, you happen to see error messages complaing about missing dlls and at the end of them (there can be a lot) find something like:
-like the following:
+The procedure below has been reported to work, if when starting an McXtrace simiulation for the GUI, you happen to see error messages complaing about missing dlls and at the end of them (there can be a lot) find something like the following:
 <pre><code>
 File "C:\mcxtrace-1.4\miniconda3\lib\site-packages\numpy\core\__init__.py", line 14, in <module>
 from . import multiarray ImportError: DLL load failed ...
 </code></pre>
 
+If this applies to you then you may try this, which has been reported to work:
 <ol>
     <li> Move the numpy folder in the miniconda3 folder <code>c:/mcxtrace-1.4/minoconda3/Lib/site-packages/numpy</code> out of the way.</li>
     <li> Start a mcxtrace shell session</li>
