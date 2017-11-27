@@ -34,10 +34,10 @@ A reported issue with McXtrace 1.4 and numpy has found a workaround.
 If you happen to see error messages like the following when starting McXtrace:
 <img src="/files/python_numpy_multiarray_prob.png">.
 Check at the end of the set of red python error messages (there can be a lot of them). If it complains about missing <pre>multiarray</pre> dll then the following procedure has been reported to work:
-<ol type="I">
-    <li> Move the numpy folder in the miniconda3 folder <pre>c:/mcxtrace-1.4/minoconda3/Lib/site-packages/numpy</pre> out of the way. </li>
+<ol>
+    <li> Move the numpy folder in the miniconda3 folder <code>c:/mcxtrace-1.4/minoconda3/Lib/site-packages/numpy</code> out of the way.</li>
     <li> Start a mcxtrace shell session</li>
-    <li> In the shell issue the command <pre>pip install numpy</pre></li>
+    <li> In the shell, issue the command: <code>pip install numpy</code></li>
 </ol>
 
 
