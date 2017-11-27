@@ -29,6 +29,18 @@
 <a name="McXtrace_News" id="McXtrace_News"></a><h2> <span class="mw-headline"> McXtrace News </span></h2>
 The latest McXtrace news.
 
+<a name="McXtrace 1.4: workaround for a python issue on windows 10"</a> <h3> <span class="mw-headline">McXtrace 1.4: workaround for a python issue on windows 10</span></h3>
+A reported issue with McXtrace 1.4 and numpy has found a workaround.
+If you happen to see error messages like the following when starting McXtrace:
+<img src="/files/python_numpy_multiarray_prob.png">.
+Check at the end of the set of red python error messages (there can be a lot of them). If it complains about missing <pre>multiarray</pre> dll then the following procedure has been reported to work:
+<ol type="I">
+    <li> Move the numpy folder in the miniconda3 folder <pre>c:/mcxtrace-1.4/minoconda3/Lib/site-packages/numpy</pre> out of the way. </li>
+    <li> Start a mcxtrace shell session</li>
+    <li> In the shell issue the command <pre>pip install numpy</pre></li>
+</ol>
+
+
 <a name="McXtrace 1.4 known bugs"></a><h3> <span class="mw-headline"> McXtrace 1.4: known bugs</span></h3>
 <ul>
     <li> Lens_parab &amp; Lens_parab_Cyl: A missing 'I' in the header (line 11) trips the intersection algorithm. Fixed in the devlopment tree</li>
