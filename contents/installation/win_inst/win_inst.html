@@ -11,3 +11,27 @@ NeXus libraries. The former is the recommended way to run MPI on windows
 systems, the latter is necessary if you prefer  to get you output in the NeXus-format (see description here: <a href"http://www.nexusformat.org/">The
 NeXus format</a> instead of in the default ascii-based format.
 
+
+<a name="Ubuntu on Windows" id="UonW"</a><h2><span class="mw-headline">Ubuntu on Windows 10</span></h2>
+As an alternative to the above approach, you can also run our Debian Linux binaries directly under Windows via the WSL (Windows 10 64bit and newer only.
+
+Description and recipe:
+Partnering with Ubuntu Linux, Microsoft has released the (experimental) feature "Windows subsystem for Linux" (WSL), also known as "Bash on Ubuntu on Windows". Read more follwing these links <a href="http://www.pcworld.com/article/3106463/windows/how-to-get-bash-on-windows-10-with-the-anniversary-update.html">pcworld: bash on windows 10</a>, <a href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">hotogeek: bash on windows 10</a>.
+It turns out that it is relatively straightforward to get McXtrace running under this new feature - thereby overcoming some of the annoyances of McXtrace on the Windows platform.
+
+To try it out, please follow the below steps
+<ol>
+    <li>Install a copy of Windows 10 64 bit.</li>
+    <li>Update it beyond "Windows 10 Version 1607" - aka the "anniversary build".</li>
+    <li>Enable "developer mode" in settings.
+    <li>Use "turn features on or off" to enable "Bash in windows".</li>
+    <li>Start bash via the start icon / cmd+esc</li>
+    <li>Install McXtrace as usual on a Debian systems. Also remember that you can easily install openmpi etc.</li>
+    <li>Currently, the WSL is based on Ubuntu 14.04, so you will likely have to install the package python3-pyqtgraph manually, see GitHub issue <a href="https://github.com/McStasMcXtrace/McCode/issues/471">#471</a> for how to install a newer version from the 16.04 repos.</li>
+    <li>Install and start the Xming X-server from here: <a "href=https://sourceforge.net/projects/xming/">Xming site</a>.</li>
+    <li>Turn back to your bash and execute.</li>
+    <ul>
+        <li>export DISPLAY=localhost:0.0</li>
+        <li>mcgui & or mcgui-py & (or any of the usual McStas commands)</li>
+    </ul>
+</ol>
