@@ -124,9 +124,9 @@ h1, h2, h3, h4, h5, h6 {
 	padding-bottom: .17em;
 	border-bottom: 1px solid #aaa;
 }
-h1 { font-size: 188%; }
+h1 { font-size: 100%; }
 h1 .editsection { font-size: 53%; }
-h2 { font-size: 150%; }
+h2 { font-size: 50%; }
 h2 .editsection { font-size: 67%; }
 h3, h4, h5, h6 {
 	border-bottom: none;
