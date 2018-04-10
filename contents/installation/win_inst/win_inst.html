@@ -3,7 +3,7 @@
 
 <p>
 <ol type="I">
-    <li>Make sure you have <i>strawberry perl installed</i>. For instance by
+    <li>Make sure you have <b>strawberry perl</b> installed. For instance by
         downloading and installing the <b>INSTALL_FIRST_...</b>-file from from <a
 href="http://downloads.mcxtrace.org/mcxtrace-1.4/windows/">here</a>. This
 also includes the <b>MinGW</b> c-compiler for windows.
@@ -19,7 +19,7 @@ Please note that we do recommend using the 32 bit version even though you have a
 
 In the extras directory you may additionally find MS MPI-libraries and and
 NeXus libraries. The former is the recommended way to run MPI on windows
-systems, the latter is necessary if you prefer  to get you output in the NeXus-format (see description here: <a href"http://www.nexusformat.org/">The
+systems, the latter is necessary if you prefer to get output in the NeXus-format (<a href"http://www.nexusformat.org/">The
 NeXus format</a>) instead of in the default ascii-based format.
 
 
@@ -27,7 +27,13 @@ NeXus format</a>) instead of in the default ascii-based format.
 As an alternative to the above approach, you can also run our Debian Linux binaries directly under Windows via the WSL (Windows 10 64bit and newer only).
 
 Description and recipe:<br />
-Partnering with Ubuntu Linux, Microsoft has released the (experimental) feature "Windows subsystem for Linux" (WSL), also known as "Bash on Ubuntu on Windows". Read more follwing these links <a href="http://www.pcworld.com/article/3106463/windows/how-to-get-bash-on-windows-10-with-the-anniversary-update.html">pcworld: bash on windows 10</a>, <a href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">hotogeek: bash on windows 10</a>.
+Partnering with Ubuntu Linux, Microsoft has released the (experimental) feature
+"Windows subsystem for Linux" (WSL), also known as "Bash on Ubuntu on Windows".
+Read more follwing these links <a
+href="http://www.pcworld.com/article/3106463/windows/how-to-get-bash-on-windows-10-with-the-anniversary-update.html">pcworld:
+bash on windows 10</a>, <a
+href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">howtogeek:
+bash on windows 10</a>.
 It turns out that it is relatively straightforward to get McXtrace running under this new feature - thereby overcoming some of the annoyances of McXtrace on the Windows platform.
 
 To try it out, please follow the below steps
@@ -41,7 +47,7 @@ To try it out, please follow the below steps
     <li>Install and start the Xming X-server from here: <a "href=https://sourceforge.net/projects/xming/">Xming site</a>.</li>
     <li>Turn back to your bash and execute:</li>
     <ul>
-        <li>export DISPLAY=localhost:0.0</li>
-        <li>mcgui & or mcgui-py & (or any of the usual McXtrace commands)</li>
+        <li><pre>export DISPLAY=localhost:0.0</pre></li>
+        <li><pre>mcgui & or mcgui-py & (or any of the usual McXtrace commands)</pre></li>
     </ul>
 </ol>
