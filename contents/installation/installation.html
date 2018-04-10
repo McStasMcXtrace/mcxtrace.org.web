@@ -1,6 +1,6 @@
 
 <a name="Installation_instructions_for_McXtrace" id="Installation_instructions_for_McXtrace"></a><h1> <span class="mw-headline">Installation instructions for McXtrace</span></h1>
-<p>Below are listed instructions on how to install McXtrace on some of the supported platforms. For other platforms please use the source tarball distribution. 
+<p>Below are listed instructions on how to install McXtrace on some of the supported platforms. For platforms not listed please use the source tarball distribution. 
 </p>
 <a name="Debian.2FUbuntu_class_Linux_systems" id="Debian.2FUbuntu_class_Linux_systems"></a><h2> <span class="mw-headline">Debian/Ubuntu class Linux systems</span></h2>
 <p> 
@@ -40,13 +40,16 @@ Please report any problems with repository or installation to <a href="mailto:mc
 
 <a name="RedHat_class_Linux_systems" id="RedHat_class_Linux_systems"></a><h2> <span class="mw-headline">Red Hat class Linux systems</span></h2>
 
-McXtrace provides a package repository for use with RedHat-based distributions, such as RedHat, Fedora, CentOS and Scientific Linux. To allow automatic update of your mcxtrace, mcxtrace-components and tools when new revisions are relased, follow the below instruction.
+McXtrace provides a package repository for use with RedHat-based distributions, such as RedHat, Fedora, CentOS and Scientific Linux.
+<br />
+To allow automatic update of mcxtrace, mcxtrace-components and tools when new revisions are relased, follow the below instruction.
 
 On RedHat class systems (including Scientific Linux, CentOS etc.):
-
+<pre>
 cd /etc/yum.repos.d
 sudo wget http://packages.mccode.org/rpm/mccode.repo
 sudo yum update
+</pre><br />
 
 This makes your system aware of the McXtrace packages:
 <pre>
@@ -72,7 +75,7 @@ mcxtrace-tools-python-mxplot-pyqtgraph-1.4.x86_64 : python-tools-mcplot-pyqtgrap
 mcxtrace-tools-python-mxrun-1.4.x86_64 : python-tools-mcrun built using CMake
 </pre>
 
-Please note that our rpm-packages in the repo have been built using a centos7.2 machine. For older machines it may be preferrable to use a set of packages built on Scientific Linux 6.1. These may be found here:<a href="http://downloads.mcxtrace.org/mcxtrace-1.4/linux/mcxtrace-1.4-rpm64_ScientificLinux6.1/">Scientific Linux rpms.</a>
+Please note that our rpm-packages in the repo have been built using a centos7.2 machine. For older machines it may be preferrable to use a set of packages built on <b>Scientific Linux 6.1</b>. These may be found here:<a href="http://downloads.mcxtrace.org/mcxtrace-1.4/linux/mcxtrace-1.4-rpm64_ScientificLinux6.1/">Scientific Linux rpms.</a>
 
 Please report any problems with repository or installation to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>. We will do our utmost to help you.
 
