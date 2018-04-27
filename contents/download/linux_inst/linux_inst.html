@@ -5,6 +5,12 @@
 </head>
 
 <body>
+
+<h1>Installing McXtrace on linux<br>
+</h1>
+In principle any Linux/UNIX system is able to run McXtrace - we specifically distribute binary installation packages for debian (.deb) and redhat (.rpm) based systems.
+If your system is neither of these - you should nevertheless be able to install from source. In this case consult the instruction for building from source: <a href="unix_inst/">Unix_Inst (src)</a>.
+
 <a name="Debian.2FUbuntu_class_Linux_systems" id="Debian.2FUbuntu_class_Linux_systems"></a><h2> <span class="mw-headline">Debian/Ubuntu class Linux systems</span></h2>
 <p> 
 The simplest way to get a McXtrace running on this type of system is to simply add the McXtrace repository to your list of source for .deb files, and then rely on <pre>apt-get</pre> to get any required dependencies.
@@ -15,7 +21,8 @@ wget http://packages.mccode.org/debian/mccode.list
 apt-get update
 </pre>
 
-This adds the mccode repository to the list of searched repositories:
+This adds the mccode repository to the list of searched repositories and makes your system aware of the various installation modules of mcxtrace. 
+A minimal installation would consists of <code>mcxtrace-1.4</code> and <code>mcxtrace-comps-1.4</code>.
 <pre>
 mcxtrace@debian:~$ apt-cache search mcxtrace |grep 1.4
 mcxtrace-1.4 - mcxtrace built using CMake
@@ -58,6 +65,7 @@ This makes your system aware of the McXtrace packages:
 <pre>
 [mcxtrace@centos]$ yum search mcxtrace |grep -v 1.2 |grep -v 1.1
 Loaded plugins: security
+
 ============================ N/S Matched: mcxtrace =============================
 mcxtrace-1.4.x86_64 : mcxtrace built using CMake
 mcxtrace-comps-1.4.x86_64 : mcxtrace-comps built using CMake
