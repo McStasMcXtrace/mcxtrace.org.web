@@ -1,59 +1,49 @@
-<a name="Mac OSX Installation" id="Mac_OSX"></a><h2>Mac OSX Installation Instructions</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>McXtrace Installation on Mac OS X</title>
+</head>
+<body>
+<p><b>The distribution packages for McXtrace may be downloaded via <a href="http://downloads.mcxtrace.org"</a>http://downloads.mcxtrace.org</a></b>
+<h1>Installing McXtrace 1.4 and later on Mac OS X<br>
+</h1>
+<ol>
+  <li>Download the mcxtrace-1.4-macOS.tar.gz archive
+  <li>Unpack it and open the mcxtrace-1.4 folder in Finder
+  <li>Drag the McXtrace-1.4.app and the McXtrace-1.4-environment.command
+  to your /Applications folder
+  <li>Right-click and chose "open" on the
+  Check-PY-dependencies.command script
+  <li><b>PLEASE follow the on-screen instructions -
+  and repeat opening the script until after you have been offered to
+  take ownership of /usr/local!</b>
+  <li>You should further Place <a
+  href="http://downloads.mcxtrace.org/mcxtrace-1.4/mac/mccode_config.py">this
+  configuration file</a> in your
+  /Applications//McXtrace-1.4.app/Contents/Resources/mcxtrace/1.4/tools/Python/mccodelib/
+  folder (hint: run 'open $MCSTAS' from the terminal and you should
+  get a finder window in
+  /Applications//McXtrace-1.4.app/Contents/Resources/mcxtrace/1.4/)
+  <li>Optionally also run the Check-PL-dependencies.command script if
+  you want to have access to the Perl tools
+</ol>
+Once installed you may open the McXtrace-1.4.app from
+/Applications. (On the first run, please right-click and choose
+"open"). Depending on your version of Mac OS, you may have to
+adjust security settings to allow "Apps from anywhere".
+<!--<img src="mcgui_mac.png"><-->
 
-To install McXtrace on a computer running Mac OSX you first need to 
-allow installation of third party software (System Preferences -> Security & Privacy -> General -> Allow applications downloaded from: Anywhere) - can be reset after the installation of the McXtrace bundle.
-You must also install XCode from the App store (or installation medium), and in particular the Xcode command line tools. For 10.9 or later these are included by defualt in the Xcode installation. 
-For the purpose of just running McXtrace
- full installation of Xcode is not necessary. You may instead issue the command
- <pre>sudo xcode-select --install</pre>
- inside a terminal, to get only the Xcode command line tools.
-<p>
 
-You may furhter install either Intel C (commercial product) or the version of gcc available from http://hpc.sourceforge.net, as they both work much better than the Apple-provided llvm and llvm-gcc compilers.
-On MacOSX 10.8 and above (Mountain Lion, Mavericks), also install XQuartz (X11).
-If on Yosemite, there's an X.app in Applications->Utilities which will take you directly to the Xquartz-website<a href="http://xquartz.macosforge.org"></a>
-<p>
-
-Afterwards, unzip your downloaded McXtrace bundle corresponding to your version of Mac OS X (we currently provide packages for 10.9 Maverics and 10.10 Yosemite) and run it. We can of course generate packages
-for older versions of Mac OSX if necessary. Please let us know and we'll try to support your platform as well.
-<p>
-
-Apart from the dependencies mentioned above, the defaults of the installation bundle includes everything you need for a base installation of McXtrace, namely
+    <p>To use your newly installed McXtrace from the terminal, either
 <ul>
-    <li>McXtrace code generator, components, instruments and datafiles</li>
-    <li>The "classic" McXtrace Perl tools configured for use on your version of Mac OS X</li>
-    <li>PGPLOT graphical backend for mxplot/mxdisplay</li>
-    <li>McXtrace-specific extensions to Perl</li>
-    <li>Tk widgets for Perl</li>
+  <li>Use the <b>McXtrace-1.4-environment.command</b> shortcut from /Applications
+  <li>Issue the <b>mcxtrace-1.4-environment</b> command in a new terminal
+  <li>Use the <b>File->Set as default</b> menu point in the Python mxgui 
 </ul>
-
-The installation procedure is shown in the images below.
-
-<p>When the installation process is started you are greeted with this screen:</p>
-<img src="mac_osx_install_screensnap001.png"></img>
+<!--<img src="mcenv_mac.png"><-->
 
 
-<p>The next step mentions the dependencies of McXtrace.</p>
-<img src="mac_osx_install_screensnap002.png"></img>
-
-
-<p>Thirdly, you are asked to read and accept the Gnu public License under which McXtrace is distributed.</p>
-<img src="mac_osx_install_screensnap003.png"></img>
-<img src="mac_osx_install_screensnap004.png"></img>
-
-<p>Next, you are asked to choose which additional modules (if any) to install. A minimal McXtrace installation 
-is already selected for you. Importantly - to enable running McXtrace in parallel using <a href="http://www.openmpi.org">openmpi</a>, check the box in front
- of the mcxtrace-openmpi-1.2 module.</p>
-<img src="mac_osx_install_screensnap005.png"></img>
-
-<p>Lastly - you are asked to confirm that you really do want to install McXtrace.</p>
-<img src="mac_osx_install_screensnap006.png"></img>
-
-<p>If all goes well you should now see this screen.</p>
-<img src="mac_osx_install_screensnap007.png"></img>
-
-<h2>Troubleshooting</h2>
-<ul>
-    <li>
-        In case you, instead of the last screen, get an error message saying that packages could not be validated, please check that you have installed Xquartz.</li>
-</ul>
+<p>Please report any trouble in using these instructions to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>.
+<address></address>
+<!-- hhmts start -->Last modified: Thu May 18 13:33:53 CEST 2017 <!-- hhmts end -->
+</body> </html>

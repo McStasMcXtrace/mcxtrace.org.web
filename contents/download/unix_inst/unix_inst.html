@@ -4,7 +4,7 @@
 </head>
 
 <body>
-<p><b>The distribution packages for McStas may be downloaded via <a href="http://downloads.mcxtrace.org"</a>http://downloads.mcxtrace.org</a></b>
+<p><b>The distribution packages for McXtrace may be downloaded via <a href="http://downloads.mcxtrace.org"</a>http://downloads.mcxtrace.org</a></b>
 
 <h1> McXtrace 1.2 and later on Unix - from source code</h1>
 In principle any Unix/Linux distribution should be able to run McXtrace, but
@@ -40,13 +40,13 @@ GitHub. Both methods are examplified below:
   <li> Download and build the McXtrace source code for Unix systems:
   <ul>
     <li>wget http://downloads.mcxtrace.org/mcxtrace-1.4/unix/mcxtrace-1.4-UNIX-src.tgz
-    <li> Unpack the "metapackage" tarball<br> tar xzf McStas-1.4-UNIX-src.tgz
+    <li> Unpack the "metapackage" tarball<br> tar xzf McXtrace-1.4-UNIX-src.tgz
     <li> cd mcxtrace-1.4-UNIX-src/
     <li> Unpack the individual subpackages<br>
     find . -name \*tar.gz -exec tar xzf \{\} \;
-    <li> Next, compile the individual packages you want (minimum set is mcxtrace-1.4-src mcstas-comps-1.4-src) using e.g.
+    <li> Next, compile the individual packages you want (minimum set is mcxtrace-1.4-src mcxtrace-comps-1.4-src) using e.g.
     <ul>
-      <li>cd mcstas-1.4-src
+      <li>cd mcxtrace-1.4-src
       <li>cmake -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/freebsd64.cmake -Denable_mcxtrace=1
       <li>make
       <li>sudo make install
@@ -87,12 +87,11 @@ The most important settings for cmake building are
 <ul>
   <li>-DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/freebsd64.cmake (defines
   various system default settings, mostly for the tool configuration)
-  <li>-Denable_mcstas=1 (defines if building McStas or her sister
-  McXtrace)
+  <li>-Denable_mcxtrace=1 (defines if building McXtrace or her sister McStas)
   <li>-DCMAKE_INSTALL_PREFIX=/usr/local/
 </ul>
 
-<p>Please report any trouble in using these instructions to <a href="mailto:mcxtrace-users@mcstas.org">mcxtrace-users@mcstas.org</a>.
+<p>Please report any trouble in using these instructions to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>.
 <hr>
 <address></address>
 <!-- hhmts start -->Last modified: Thu Jun 16 10:49:39 CEST 2016 <!-- hhmts end -->
