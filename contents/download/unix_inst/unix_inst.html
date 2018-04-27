@@ -15,8 +15,7 @@ able to build either from the source tarball or directly from
 GitHub. Both methods are examplified below:
 
 <h3>Tarball Installation on FreeBSD (tested on PC-BSD 10.0) using ports</h3>
-<i>N.B. McXtrace will be available on FreeBSD as binary packages shortly. You will then be able to install it simply by:
-    <pre>[sudo] pkg install mcxtrace</pre>
+<i>N.B. McXtrace will be available on FreeBSD as binary packages shortly. You will then be able to install it simply by: <code>[sudo] pkg install mcxtrace</code>.
 </i>
 
 <ul>
@@ -62,7 +61,7 @@ For the other McXtrace tool packages, please inspire from the
 
 - check out a copy via
 
-<pre>git clone https://github.com/McStasMcXtrace/McCode.git</pre>
+<pre><code>git clone https://github.com/McStasMcXtrace/McCode.git</code></pre>
 
 <p>We build using CMake - which needs to be above version 3.0!
 
@@ -70,8 +69,8 @@ For the other McXtrace tool packages, please inspire from the
   href="https://github.com/McStasMcXtrace/McCode/blob/master/BUILD_DEPS.TXT">BUILD_DEPS.TXT</a>
   which is also located in your checked-out folder. 
 
-  <p>Also, at the top level, in that folder you will find a set of helper scripts called <pre>build_*</pre> which we
-  use to build for e.g. Debian, RedHat, Windows and Mac OS X The script <pre>build_src_bin_mcxtrace</pre> should
+  <p>Also, at the top level, in that folder you will find a set of helper scripts called <code>build_*</code> which we
+  use to build for e.g. Debian, RedHat, Windows and Mac OS X The script <code>build_src_bin_mcxtrace</code> should
 (via common Linux "settings" in the cmake "toolchains"
 cmake/toolchains/linux*) be able to build most of the packages
 as .tar.gz bundles.
