@@ -59,9 +59,13 @@ For the other McXtrace tool packages, please inspire from the
 
 <h3>Building from GitHub</h3>
 
-- check out a copy via
+Check out a copy via
 
 <pre><code>git clone https://github.com/McStasMcXtrace/McCode.git</code></pre>
+
+then proceed using the instructions below.
+
+<h3>Building components of the installation</h3>
 
 <p>We build using CMake - which needs to be above version 3.0!
 
@@ -90,6 +94,7 @@ The most important settings for cmake building are
   <li>-Denable_mcxtrace=1 (defines if building McXtrace or her sister McStas)
   <li>-DCMAKE_INSTALL_PREFIX=/usr/local/
 </ul>
+where we have used a 64 bit FreeBSD machine as an example. This should be edied to reflect your target system.
 
 <p>Please report any trouble in using these instructions to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>.
 <hr>
