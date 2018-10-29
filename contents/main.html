@@ -30,17 +30,17 @@ The latest McXtrace news.
 
 <a name="McXtrace 1.4 on Mac OS 10.14 Mojave"></a> <h3> McXtrace 1.4 on Mac OS 10.14 Mojave </h3>
 It appears that McXtrace can fail to compile the generated c-code on Mac OS
-10.14, with an error about <pre>math.h</pre> cannot be found. A cause for this
+10.14, with an error about <code>math.h</code> cannot be found. A cause for this
 may be that with the newest release of XCode 10 there is no longer a
-<pre>/usr/include</pre> directory by default. See the relase notes for more
+<code>/usr/include</code> directory by default. See the relase notes for more
 info: <a
 href="https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes">X
 Code 10 Release notes</a>. 
 For now, a package is distributed with XCode 10 that
-will create <pre>/usr/include</pre> and its contents: 
-<pre>
+will create <code>/usr/include</code> and its contents: 
+<pre><code>
 /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg 
-</pre>
+</code></pre>
 
 The release notes state that this package will <i>not</i> be packaged in future releases of XCode. We are working on a long term solution. 
 
