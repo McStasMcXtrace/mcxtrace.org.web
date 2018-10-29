@@ -15,7 +15,6 @@
 
 
 <p></span>
-</p><p>Funding from NABIIT, <a href="http://fi.dk/raad-og-udvalg/det-strategiske-forskningsraad" class="external text" title="http://fi.dk/raad-og-udvalg/det-strategiske-forskningsraad" rel="nofollow">DSF</a> and the above parties.
 </p><p>Our code is based on technology from <a href="http://www.mcstas.org" class="external text" title="http://www.mcstas.org" rel="nofollow"><img src="/files/mcstas_logo_thumb.png" alt="mcstas_logo_thumb.png" /></a>.
 </p><p>Code repository (shared with 'McStas') is located at <a href="https://github.com/McStasMcXtrace" class="external text" title="http://github.com/McStasMcXtrace" rel="nofollow">github.com/McStasMcXtrace</a>
 </p><p>For information on our progress, please subscribe to our <a href="/List">user mailinglist</a>..
@@ -28,6 +27,22 @@
 
 <a name="McXtrace_News" id="McXtrace_News"></a><h2> <span class="mw-headline"> McXtrace News </span></h2>
 The latest McXtrace news.
+
+<a name="McXtrace 1.4 on Mac OS 10.14 Mojave"></a> <h3> McXtrace 1.4 on Mac OS 10.14 Mojave </h3>
+It appears that McXtrace can fail to compile the generated c-code on Mac OS
+10.14, with an error about <pre>math.h</pre> cannot be found. A cause for this
+may be that with the newest release of XCode 10 there is no longer a
+<pre>/usr/include</pre> directory by default. See the relase notes for more
+info: <a
+href="https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes">X
+Code 10 Release notes</a>. 
+For now, a package is distributed with XCode 10 that
+will create <pre>/usr/include</pre> and its contents: 
+<pre>
+/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg 
+</pre>
+
+The release notes state that this package will <i>not</i> be packaged in future releases of XCode. We are working on a long term solution. 
 
 <a name="McXtrace 1.4: workaround for a python issue on windows 10"</a> <h3> <span class="mw-headline">McXtrace 1.4: workaround for a python issue on windows 10</span></h3>
 [27/11/2017] A reported issue with McXtrace 1.4 and numpy has found a workaround.
