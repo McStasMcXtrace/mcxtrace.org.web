@@ -28,6 +28,59 @@
 <a name="McXtrace_News" id="McXtrace_News"></a><h2> <span class="mw-headline"> McXtrace News </span></h2>
 The latest McXtrace news.
 
+<a name="McXtrace 1.5 is released"></a> <h3> McXtrace 1.5 is released</h3>
+[25/10/2019] Dear all - The McXtrace team is proud to announce the release of McXtrace version 1.5. The release contains many improvements to computaions, model improvements, new components and example instruments, as well as general stability improvements. Head on over to <a href="https://download.mcxtrace.org"></a> and get yours while it is still hot!
+
+Packages have been built on Debian Stable (10), Centos 7, Mac OS Catalina, and for windows 64 bit. Fedora 29 rpms are also available.
+Debian and Centos packages are available through our repositories (using apt-get and yum). Mac users should simply be able to download the bundle and drag it to <code>/Applications</code> as normal.
+
+As always - if you experience _any_ problems please don't hesitate to contact the McXtrace team through 
+
+<b>CHANGES in 1.5</b>
+<ol>
+<li> Standardized reflectivity library, making it mush simpler to deal with reflectivity files</li>
+<li> The shipped MCPL-library has been updated</li>
+<li> Updated and streamlines the installation procedure - such that windows and Mac installs are now (almost completely sandboxed).</li>
+<li> New components:
+        <ol> 
+        <li> Bragg_crystal (replacing Perfect_crystal)</li>
+        <li> Bragg_crystal_BC</li>
+        <li> Laue_crystal_BC</li>
+        <li> Reflective grating</li>
+        <li> SAXS_samples series</li>
+        <li> Attenuating_mask</li>
+        <li> Phi_monitor: Phase monitor.</li>
+        </ol></li>
+<li>Updates to components:
+        <ol>
+        <li> Mirror comp - can now be either in the xz or yz-plane</li>
+        <li> Virtual option to Mask-component - used to artifically add a 2D-pattern to a subsequent component.</li>
+        <li> Mirrors now use the refletivity library</li>
+        <li> Source_lab: Add Ag as an anode material</li>
+        <li> Source_lab: Default is now to use lorentzian line-shapes</li>
+        <li> Undulator: Easier to compile with GSL on windows</li>
+        <li> PowderN Major improvement in the way incoherent scattering is handled</li>
+        <li> Monitors: Monitors now have a nowritefile option to dynamically disable monitor (useful if an instrument has a lot of monitors)</li>
+        <li> PSD_monitor: pixel count can now be set by a variable</li>
+        <li> PSD_monitor_coh: optionally rays are now treated as if they hit a pixel center. This avoids convoluting the pixel shape in the interference pattern</li>
+        <li> MCPL: encode polarization vector </li>
+        </ol></li>
+<li>several new example and updated instruments:
+        <ol>
+        <li>MAXIV_Bloch</li>
+        <li>MAXIV_DanMax</li>
+        <li>DBD_IBM_Si_analyzer</li>
+        <li>PDB_BT</li>
+        <li>Template_Johann_spectrometer</li>
+        <li>Updated Test instruments (many of these can be used as examples)</li>
+        </ol>
+<li> Updates to the GUI - including autoplot options and imporved stability of the plotting and disply subsystems</li>
+<li> Performance improvement to MPI</li>
+<li> Better performance on reading datafiles (especially on windows)</li>
+<li> Updated manual</li>
+</ol>
+... and more
+
 <a name="McXtrace 1.4 on Mac OS 10.14 Mojave"></a> <h3> McXtrace 1.4 on Mac OS 10.14 Mojave </h3>
 It appears that McXtrace can fail to compile the generated c-code on Mac OS
 10.14, with an error that <code>math.h</code> cannot be found. A cause for this
