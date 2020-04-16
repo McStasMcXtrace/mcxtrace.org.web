@@ -23,23 +23,24 @@ apt-get update
 </pre>
 
 This adds the mccode repository to the list of searched repositories and makes your system aware of the various installation modules of mcxtrace. 
-A minimal installation would consists of <code>mcxtrace-1.4</code> and <code>mcxtrace-comps-1.4</code>.
+A minimal installation would consists of <code>mcxtrace-1.5</code> and <code>mcxtrace-comps-1.5</code>.
 <pre>
-mcxtrace@debian:~$ apt-cache search mcxtrace |grep 1.4
-mcxtrace-1.4 - mcxtrace built using CMake
-mcxtrace-clustertools-1.4 - perl-cluster-tools built using CMake
-mcxtrace-comps-1.4 - mcxtrace-comps built using CMake
-mcxtrace-manuals-1.4 - mcxtrace_manuals built using CMake
-mcxtrace-tools-matlab-mxplot-1.4 - matlab-tools-mcplot built using CMake
-mcxtrace-tools-perl-1.4 - legacy-tools built using CMake
-mcxtrace-tools-perl-cmdline-1.4 - legacy-tools-cmdline built using CMake
-mcxtrace-tools-python-mccodelib-1.4 - python-tools-mccodelib built using CMake
-mcxtrace-tools-python-mxdisplay-pyqtgraph-1.4 - python-tools-mcdisplay-pyqtgraph built using CMake
-mcxtrace-tools-python-mxdisplay-webgl-1.4 - python-tools-mcdisplay-webgl built using CMake
-mcxtrace-tools-python-mxgui-1.4 - python-tools-mcgui built using CMake
-mcxtrace-tools-python-mxplot-matplotlib-1.4 - python-tools-mcplot built using CMake
-mcxtrace-tools-python-mxplot-pyqtgraph-1.4 - python-tools-mcplot-pyqtgraph built using CMake
-mcxtrace-tools-python-mxrun-1.4 - python-tools-mcrun built using CMake
+mcxtrace@debian:~$ apt-cache search mcxtrace |grep 1.5
+mcxtrace-1.5 - mcxtrace built using CMake
+mcxtrace-clustertools-1.5 - perl-cluster-tools built using CMake
+mcxtrace-comps-1.5 - mcxtrace-comps built using CMake
+mcxtrace-manuals-1.5 - mcxtrace_manuals built using CMake
+mcxtrace-tools-matlab-mxplot-1.5 - matlab-tools-mxplot built using CMake
+mcxtrace-tools-perl-1.5 - legacy-tools built using CMake
+mcxtrace-tools-perl-cmdline-1.5 - legacy-tools-cmdline built using CMake
+mcxtrace-tools-python-mccodelib-1.5 - python-tools-mccodelib built using CMake
+mcxtrace-tools-python-mxdisplay-pyqtgraph-1.5 - python-tools-mxdisplay-pyqtgraph built using CMake
+mcxtrace-tools-python-mxdisplay-webgl-1.5 - python-tools-mxdisplay-webgl built using CMake
+mcxtrace-tools-python-mxgui-1.5 - python-tools-mcgui built using CMake
+mcxtrace-tools-python-mxplot-matplotlib-1.5 - python-tools-mxplot built using CMake
+mcxtrace-tools-python-mxplot-pyqtgraph-1.5 - python-tools-mxplot-pyqtgraph built using CMake
+mcxtrace-tools-python-mxrun-1.5 - python-tools-mxrun built using CMake
+mcxtrace-tools-python-mxdoc-1.5 - python-tools-mxdoc built using CMake
 </pre>
 To avoid installing all of these packages individually it is possible to install a meta-package wich includes a typical set of the above:
 <pre>
