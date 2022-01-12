@@ -1,4 +1,3 @@
-This is the repository for the mcxtrace.org webpage - and nothing else
-This website is handled by git. just clone the repository from mcc-01.risoe.dk - and push commits. That should trigger the update commands.
+This is the content repository for the mcxtrace.org webpage - and nothing else
+The website is handled by git. Pushing should should trigger the update update commands run at the server.
 
-More content to come - shortly
