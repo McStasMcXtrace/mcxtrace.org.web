@@ -100,8 +100,9 @@ New Components<ul>
 
 <li>Many updates to existing beamline models.</li>
 
+</ul>
 
-
+<hr>
 
 <a name="McXtrace 1.5 is released"></a> <h3> McXtrace 1.5 is released</h3>
 [25/10/2019] Dear all - The McXtrace team is proud to announce the release of McXtrace version 1.5. The release contains many improvements to computations, model improvements, new components and example instruments, as well as general stability improvements. Head on over to <a href="http://download.mcxtrace.org">downloads.mcxtrace.org</a> and get yours while it is still hot!
@@ -158,6 +159,8 @@ As always - if you experience _any_ problems please don't hesitate to contact th
 </ol>
 ... and more
 
+<hr>
+
 <a name="McXtrace 1.4 on Mac OS 10.14 Mojave"></a> <h3> McXtrace 1.4 on Mac OS 10.14 Mojave </h3>
 It appears that McXtrace can fail to compile the generated c-code on Mac OS
 10.14, with an error that <code>math.h</code> cannot be found. A cause for this
@@ -174,6 +177,7 @@ will create <code>/usr/include</code> and its contents:
 
 The release notes state that this package will <i>not</i> be packaged in future releases of XCode. We are working on a long term solution. 
 
+<hr>
 <a name="McXtrace 1.4: workaround for a python issue on windows 10"</a> <h3> <span class="mw-headline">McXtrace 1.4: workaround for a python issue on windows 10</span></h3>
 [27/11/2017] A reported issue with McXtrace 1.4 and numpy has found a workaround.
 
@@ -190,29 +194,30 @@ If this applies to you then you may try this, which has been reported to work:
     <li> In the shell, issue the command: <code>pip install numpy</code></li>
 </ol>
 
-
+<hr>
 <a name="McXtrace 1.4 known bugs"></a><h3> <span class="mw-headline"> McXtrace 1.4: known bugs</span></h3>
 [16/08/2017] A list of known bugs in the McXtrace 1.4 dsitribution. These will be fixed in an upcoming 1.4.1.
 <ul>
-    <li> Lens_parab &amp; Lens_parab_Cyl: A missing 'I' in the header (line 11) trips the intersection algorithm. Fixed in the development tree</li>
-    <li> mxplot-pyqtgraph  on windows: An error in a post-install script causes
-        the file c:\mcxtrace-1.4\bin\mxplot-pyqtgraph to have a typo where it
-        says mcplot.py instead of mxplot.py as it should. The mxplot-pyqtgraph
-        script is generated install time - the install procedure has been
-        altered to fix this. 
-        For existing systems the simple workaround is to
-        either edit that file in place or to replace it with one from this link:<a
-           href="downloads.mcxtrace.org/mcxtrace-1.4/fixes">downloads.mcxtrace.org/mcxtrace-1.4/fixes</a>.
-    </li>
-    <li> On windows, if you want to use the Undulator component, you must also
-        install The GNU scientific Library (GSL). It is available from <a
-            href="http://gnuwin32.sourceforge.net/packages/gsl.htm">gnuwin32.sourceforge.net/packages/gsl</a>.
-        This also implies that you probably need to edit the mcxtrace compiler
-        flags. Go to File->Configure and add something along the lines
-        "-Lc:\mcxtrace\Program Files (x86)\GnuWin32\lib -Ic:\mcxtrace\Program
-        Files (x86)\GnuWin32\include" to the C flags box for mcxxtrace to be
-        find the libraries compile time.</li> 
+  <li> Lens_parab &amp; Lens_parab_Cyl: A missing 'I' in the header (line 11) trips the intersection algorithm. Fixed in the development tree</li>
+  <li> mxplot-pyqtgraph  on windows: An error in a post-install script causes
+  the file c:\mcxtrace-1.4\bin\mxplot-pyqtgraph to have a typo where it
+  says mcplot.py instead of mxplot.py as it should. The mxplot-pyqtgraph
+  script is generated install time - the install procedure has been
+  altered to fix this. 
+  For existing systems the simple workaround is to
+  either edit that file in place or to replace it with one from this link:<a
+  href="downloads.mcxtrace.org/mcxtrace-1.4/fixes">downloads.mcxtrace.org/mcxtrace-1.4/fixes</a>.
+  </li>
+  <li> On windows, if you want to use the Undulator component, you must also
+  install The GNU scientific Library (GSL). It is available from <a
+  href="http://gnuwin32.sourceforge.net/packages/gsl.htm">gnuwin32.sourceforge.net/packages/gsl</a>.
+  This also implies that you probably need to edit the mcxtrace compiler
+  flags. Go to File->Configure and add something along the lines
+  "-Lc:\mcxtrace\Program Files (x86)\GnuWin32\lib -Ic:\mcxtrace\Program
+  Files (x86)\GnuWin32\include" to the C flags box for mcxxtrace to be
+  find the libraries compile time.</li> 
 </ul>
+<hr>
 <a name="McXtrace 1.4 Released!"></a><h3> <span class="mw-headline"> McXtrace 1.4 is released!</span></h3>
 [23/06/2017] The McXtrace team is proud to announce that McXtrace 1.4 has finally been released. In the first step packages are made available for debian systems, while the testing trolls do their work on the rpms and windows file to make sure the installation procedure runs as smooth as possible. Fortunately testing trolls do not celebrate Swedish midsummers' eve.
 
@@ -283,28 +288,6 @@ and the _rough versions themselves retired.</li>
 
 <hr>
 
-<a name="PowderNBug"></a><h3> <span class="mw-headline">Bug in PowderN.comp</span></h3>
-A bug has been found in PowderN shipped with McXtrace 1.2. It results in underestimating absorption substantially. A patch has been commited to the devlopment tree
-which may be downloaded from <a href="https://github.com/McStasMcXtrace/McCode/blob/master/mcxtrace-comps/samples/PowderN.comp">PowderN.comp</a>.
-Thanks to the groups at University College London and Cranfield University for reporting this.
-<hr>
-
 <a href="news/old_news.html">Older News</a>
 
-<hr>
-<a name="McXtrace_Manual" id="McXtrace_Manual"></a><h3> <span class="mw-headline"> McXtrace Manual </span></h3>
-<p>A manual is "under construction". A rough draft version is available here. From now on, we will upload nightly builds of the manuals here: <a href="http://download.mcxtrace.org/manual" class="external text" title="http://download.mcxtrace.org/manual" rel="nofollow">nightlies</a>.
-</p><p>A printed, bound version is planned using a Print-On-Demand scheme. 
-</p><p><b>This is work in progress and may contain significant omissions and inaccuracies</b> but for the interested it may be downloaded here:
-</p>
-<ul><li> <a href="mcxtrace_1.0_rc2_manual.pdf" class="internal" title="Mcxtrace-1.0 rc2-manual.pdf">User manual</a>
-</li><li> <a href="mcxtrace_1.0_rc2_component_manual.pdf" class="internal" title="Mcxtrace-1.0 rc2-Component manual.pdf">Component manual</a>
-</li></ul>
-<p>The <i>User manual</i> documents the use of the McXtrace system whereas the <i>Component manual</i> details the inner workings of the models employed in the components, in other words the interaction physics between devices and beam.
-</p>
-<hr>
-<hr>
-<a name="Art_Gallery" id="Art_Gallery"></a><h2> <span class="mw-headline"> Art Gallery </span></h2>
-<p>We've established a gallery of plots which are beautiful/funnny or otherwise interesting at <a href="/Art">McXtraceArt</a>. Please take a look and be inspired!
-</p>
 <a href="mailto:webmaster@mcxtrace.org" class="external free" title="mailto:webmaster@mcxtrace.org" rel="nofollow">mailto:webmaster@mcxtrace.org</a>
