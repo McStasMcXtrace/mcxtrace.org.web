@@ -27,6 +27,66 @@
 The latest McXtrace news.
 
 <hr>
+<a name="McXtrace 1.7 is released"></a> <h3> McXtrace 1.7 is released</h3>
+Dear simulators,
+The team is happy to announce that McXtrace 1.7 is out! 
+<p>
+1.7 has been focused mainly on stability and bugfixes, but also provides a set of new features.
+Binary packages are provided for the main platforms: Debian /Ubuntu, Fedora, Windows 10, Mac OSX (arm and intel based).
+As is the presenty custom, see  <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace</a> for speecific installation instructions for you platform.
+<p>
+Please also keep an eye out for the for upcoming release of McXtrace 3.0, which is a technology preview release of an improved code-generator enabling McXtrace to run on GPUs.
+<p>
+Happy simulation!
+
+<p>
+<b>CHANGES in McXtrace 1.7</b>
+<ol>
+<li> Improved installation scripts
+   <ol>
+        <li>Installs cleanly on Mac silicon 
+   </ol>
+<li> Updated examples:
+   <ol>
+        <li> MAXIV_DanMAX_pxrd1d.instr
+        <li> MAXIV_DanMAX_pxrd2d.instr
+   </ol>
+<li> New examples:
+   <ol>
+       <li> SOLEIL ROCK beamline.
+        <li>ESRF BM29 skeleton beamline.
+        <li>Example of Air-scattering block.
+        <li>Test example for the GROUP langnuage feature
+        <li>Union demo test example
+        <li>New Example of Compton scattering union process.
+   </ol>
+<li> Updated Components
+   <ol>
+        <li>PowderN.comp: Fix bug with faulty packing factor logic, which lead to wrong intensities when used with SPLIT.
+	<li>Lens_parab_Cyl_rough.comp, Lens_parab_rough.comp, Lens_Kinoform.comp: documentation issues
+	<li>Mirror.comp: documentation update
+	<li>Mirror_curved.comp, Mirror_elliptic.comp: Use reflectivity library
+	<li>Mirror_toroid.comp: Fix for stable handling of reflectivity file
+	<li>Absorption_sample.comp: Fix inner/outer volume logic 
+	<li>Source_genesis13.comp, Source_simplex.comp: Documentation issues.
+        <li>Air.comp: Correct scattering amplitude.
+        <li>New: Laue_crystal_BC.comp: experimental model of a Laue crystal available for testing.
+   </ol>
+<li> Updated libraries:
+   <ol>
+        <li>Reflectivity-lib has a series of bugfixes. 
+   </ol>
+<li> New tools:
+   <ol>
+        <li>Test tool for component writers' convenience.
+        <li>Scripts for generating reflectivity files.
+   </ol>
+<li> License change:
+        The release includes a switch to the GPLv3-license for McXtrace. The underlying reason for this 
+        is to help collaboration wih the Debian project.
+</ol>
+
+<hr>
 <a name="McXtrace 1.6 is released"></a> <h3> McXtrace 1.6 is released</h3>
 [16/08/2021] Dear simulators,
 The McXtrace team is happy to announce the release of McXtrace version 1.6.<br>
