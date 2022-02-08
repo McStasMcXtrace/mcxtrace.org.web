@@ -26,6 +26,46 @@
 The latest McXtrace news.
 
 <hr>
+<a name="McXtrace 3.0 is released"></a> <h3>McXtrace 3.0 is released</h3>
+<p>Dear all,
+
+<p>The McXtrace team is happy to announce that our McXtrace 3.0 “next generation” release is now available.
+
+<p>McXtrace 3.0 is the first release in the 3.0 series with a completely rewritten code-generator and thereby
+support for GPU-acceleration through the OpenACC programming model. 
+
+<p>We have seen speedups of 1-2 orders of magnitude over the CPU version, depending on the computational
+Problem / complexity.
+
+<p>THANKS:
+<ul>
+  <li>Thanks to: all members of the team (and also to the McStas team), for pulling together to make this possible.
+  <li>Thanks to the mentors at the GPU Hackathons that really made this happen
+  <li>Thanks to NVIDIA for making the hackathons happen
+</ul>
+
+<p>INSTALLATION:
+<ul>
+  <li>Installation instructions for McXtrace-3.0 and support libraries
+  may be found on our the <a href="https://github.com/McStasMcXtrace/McCode/tree/master/Install_McXtrace-3.x">McCode github-site</a>
+  <li>OpenACC acceleration is at present available out of the box on Linux. 
+  <li>On windows it is possible to target GPU-acceleration through Windows Subsystem For Linux v2: WSL2. 
+  <li>The present McXtrace-3.0 implementation relies the concept managed memory, which
+  is at the time of writing only supported by the Linux version of the NVHPC-kit
+  (downloadable from <a href="https://developer.nvidia.com/hpc-sdk">https://developer.nvidia.com/hpc-sdk</a>)
+</ul>
+
+<p>For more information on the GPU-features of the release, please
+consult the <a
+href="https://github.com/McStasMcXtrace/McCode/blob/mcxtrace-3.0-release/CHANGES_McXtrace">CHANGES_McXtrace
+document on GitHub</a> and the section <a
+href="https://github.com/McStasMcXtrace/McCode/wiki">"Migrating from
+McStas 2.x to 3.x (and McXtrace 1.x to 3.x)" in our McCode wiki</a>
+
+<p>
+Happy simulation!
+
+<hr>
 <a name="McXtrace 1.7 is released"></a> <h3> McXtrace 1.7 is released</h3>
 Dear simulators,
 The team is happy to announce that McXtrace 1.7 is out! 
