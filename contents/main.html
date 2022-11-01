@@ -34,6 +34,54 @@ height="44px" valign="center"/></a>
 The latest McXtrace news.
 
 <hr>
+<a name="macOS 13 Ventura"></a><h3>macOS 13 Ventura</h3>
+<p>Dear all,
+<p>If you upgrade to macOS 13 Ventura (intel/x86_64), your already installed Python
+tools of McXtrace 1.7 / 3.0 and /Application bundles may not work after the upgrade.
+<p>A workaround is to:
+<ul>
+  <li>In a terminal, start your "McXtrace shell"
+  (e.g. run mcxtrace-3.0-environment, /Applications/McXtrace-3.0-environment.command or
+  /Applications/McXtrace-3.0.app/Contents/Resources/mcxtrace/3.0/environment)
+  <li>Issue the command <pre>export PATH=$MCXTRACE/miniconda3/bin:$PATH</pre>
+  <li>Next, you may issue the mcgui command<pre>mcgui</pre>
+</ul>
+<p>New releases 1.7.1 and 3.1 are in preparation and should be
+released during November or December.
+<hr>
+<a name="more Python 3.10 issues"></a><h3>another Python 3.10 / pyqtgraph issue in current releases</h3>
+<p>[01/11/2022] Dear all,
+<p>Several users have reported "yet another Python issue" that arise
+in current releases of McXtrace (1.7 / 3.0). After following the
+advice from September 23rd to replace mxgui/viewclasses.py and
+mccodelib/pqtgfrontend.py, mxplot-pyqtgraph fails with
+<pre>
+mxplot error: scale(self): too many arguments
+Traceback (most recent call last):
+File "C:\mcxtrace-1.7\lib\tools\Python\mxplot\pyqtgraph\mcplot.py", line 67, in 
+main(args)
+File "C:\mcxtrace-1.7\lib\tools\Python\mxplot\pyqtgraph\mcplot.py", line 57, in main
+raise e
+File "C:\mcxtrace-1.7\lib\tools\Python\mxplot\pyqtgraph\mcplot.py", line 51, in main
+plotter.runplot()
+File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph....\mccodelib\pqtgfrontend.py", line 62, in runplot
+plot_node(node, self.plot_func, plt_layout, viewmodel)
+File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph....\mccodelib\pqtgfrontend.py", line 144, in plot_node
+viewbox_lst.append(add_plot(layout, node, plot_func, i, n, viewmodel))
+File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph....\mccodelib\pqtgfrontend.py", line 382, in add_plot
+view_box, plt_itm = plot_node_func(node, i, plt, options)
+File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph\plotfuncs.py", line 33, in plot
+view_box, lyt = plot_Data2D(data, plt, log=opts['log'], legend=opts['legend'], icolormap=opts['icolormap'],
+File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph\plotfuncs.py", line 203, in plot_Data2D
+img.scale(dx,dy)
+TypeError: scale(self): too many arguments'
+</pre>
+To fix this issue, please replace your
+<ul>
+  <li>$MCXTRACE/tools/Python/mcplot/pyqtgraph/plotfuncs.py with <a href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/master/tools/Python/mcplot/pyqtgraph/plotfuncs.py">this new version</a>
+</ul>
+<p>New releases 1.7.1 and 3.1 are in preparation and should be released during November or December.
+<hr>
 <a name="Python 3.10 issues"></a><h3>Python 3.10 issues in current releases</h3>
 <p>[23/09/2022] Dear all,
 <p>We have recently become aware of a couple of issues that arise with all current releases of McXtrace (1.7 / 3.0)
