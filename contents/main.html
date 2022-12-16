@@ -23,8 +23,8 @@ height="44px" valign="center"/></a>
   <li> To download the latest release: <a href="http://downloads.mcxtrace.org">download area</a></li>
   <li> For installation instructions&nbsp;:</li>
   <ul>
-    <li><a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">McXtrace 1.7 installation</a></li>
-    <li><a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace-3.x">McXtrace 3.0 installation</a></li>
+    <li><a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace-1.x">McXtrace 1.7.1 installation</a></li>
+    <li><a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace-3.x">McXtrace 3.1 installation</a></li>
   </ul>
   <li> For a quick list of the available commands: <a href="documentation/commands">commands</a></li>
 </ul>
@@ -36,6 +36,138 @@ The latest McXtrace news.
 
 <p><strong><font color="green">Migrating from McXtrace 1.x to 3.x? - <a
 href="https://github.com/McStasMcXtrace/McCode/wiki">Use the wiki-based guides<a></font></strong>
+<hr>
+<a name="2022 releases"></a><h3>McXtrace 1.7.1 and McXtrace 3.1 released</h3>
+[16/12/2022]Dear all, A new PAIR of releases of McXtrace:<br>
+<br>
+McXtrace "classic" v. 1.7.1 <br>
+McXtrace "next-generation", v. 3.1 <br>
+are both built and ready for download! <br>
+<p>Download and installation instructions are available via our <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">GitHub INSTALL-doc pages</a>.
+
+<p>Selected highligts from the releases are listed below. The full
+list of changes for both releases is also available at our  <a
+href="https://github.com/McStasMcXtrace/McCode/tree/master/CHANGES_McXtrace">CHANGES_McXtrace</a> document
+
+<p>Please start your migration to 3.x:
+
+<p>McXtrace 1.7.1 is very likely the "last update" to the 1.x series,
+sharing a subset of tool features with McXtrace 3.1. The Wiki has a
+<a href="https://github.com/McStasMcXtrace/McCode/wiki#migrating-from-mcstas-2x-to-3x-and-mcxtrace-1x-to-3x">dedicated section on McXtrace 1.x -> McXtrace 3.x conversion</a> that
+includes:
+<ul>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">An overview of differences</a>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/McStas-McXtrace-3-and-GPU-terminology-%28table%29">A nomenclature list containing short descriptions of new concepts and important keywords in McXtrace 3.x</a> and OpenACC / CUDA code in general.
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">A document outlining the most importand differences between 1.x and 3.x.</a>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-instrument-for-use-under-McStas-3">A guide for 1.x -> 3.x instrument conversion.</a>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-component-for-use-under-McStas-3">A guide for 2.x -> 3.x component conversion.</a>
+</ul>
+<p>- If you are still in trouble, please write us a GitHub issue or an
+email to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>
+
+<p><b>Release highligts</b><br>
+(!!<b>3.1 only</b> denotes features or improvements that are 3.1 specific!!)
+<ul>
+  <li><b>Documentation & guides:</b>
+  <ul>
+    <li>The component pages now include an extra column in the parameter-table. When filling in
+   this column with wanted values, plus filling the entry-boxes for AT, ROTATED and instance
+   name, pressing "Generate" will put a code-snipet for your component instance directly on
+   your computer clipboard, for easy transfer to the mxgui editor or any other editor of choice!
+    <li>mxdoc has been made "less picky" wrt. component and instrument structure for a more robust
+   experience.
+    <li>mxgui has a new "Docs" button for easier access to the generated mxdoc pages (that give easy
+   access to components, instruments, manuals, datafiles and more.
+  </ul>
+  <li><b>Interoperability with other codes:</b>
+  <ul>
+    <li>We have worked on the interface with MCPL (v. 1.6.1 included) and a mechanism was developed
+    to automatically detect its location using the mcpl-config util.
+    In practice this happens prior/during to the code-generation step, see below under mxrun.
+    Thanks to Thomas Kittelmann (ESS) for your help in this area.
+  </ul>
+  <li><b>Tools:</b>
+  <ul>
+    <li>mxrun has a new solution to support 3 new keywords CMD(), ENV() and GETPATH() through the
+   DEPENDENCY line as collected by the code-generator. (see CHANGES
+    doc for more details)
+    <li>As mentioned above, mxdoc has been made "less picky" wrt. component
+    and instrument structure and enriched with JavaScript for easy
+    transfer of information to you editor.
+    <li>mxplot(-pyqtgraph) has received a nice update with an infobar at the bottom of the window.
+    The infobar is updated with coordinates of the cursor on the active plot, meaning that you
+    can easily determine the coordinates of e.g. a peak. The code has also received a number of
+    bugfixes relating to colorbars, the order of monitor output in overviews etc.
+    Thanks to Tobias Weber (ILL) for your work on mxplot.
+    <li><b>3.1 only:</b> The new mxdisplay-cad variant has come along, and is currently included in the form of a
+    technology-preview. The code uses the Python module cadquery (https://github.com/CadQuery/cadquery)
+    and is able to write e.g. STEP or STL output. For now, resolving the required dependencies is
+    left to the user, but we foresee that this tool will mature over the coming releases.
+    Thanks to Greg Tyler (ESS) for contributing this tool.
+  </ul>
+  <li><b>Components and Instruments:</b>
+  <ul>
+    <li><b>3.1 only:</b> Most of the standard monitors will now fill in their own "instance name" as filename in case
+    a filename was not defined. A small but very useful convenience.
+    <li>The Isotropic_Sqw sample which can be used to model structure and dynamics in isotropic
+   materials, such as powders and liquids has been added. The component is developed by
+   Emmanuel Farhi and also exists in the McStas code. The component is currently in
+   "Experimental" state in McXtrace.
+    <li>Multiple new SOLEIL instruments have been added, thanks to lots of work from Antoine Pado,
+    Stephane Bac and Emmanuel Farhi:
+    <ul>
+      <li>SOLEIL_ANATOMIX.instr tomography beam-line
+      <li>SOLEIL_DISCO.instr in the imaging mode
+      <li>SOLEIL_MARS.instr in the XRD mode
+      <li>SOLEIL_PX2a.instr protein crystallography beam-line
+    </ul>
+    <li>The AstroX toolbox for simulating X-ray telescopes has been included as a special component
+    category.<b>3.1 only:</b> GPU support in the related components/instruments is newly developed and likely not
+    perfect in all cases.
+    <li>Lens_elliptical.comp fixed
+    <li>Grating_reflect.comp fixed, and created a test for it.
+    <li>Udated/fixed Mirror_elliptic.comp and created a test for it.
+    <li>Beamline ssrl 11-2 (in it's unfocused and uncollimated mode) added (related to work done on glitches). 
+    <li>Czerny_Turner instrument created.
+    <li>Single_crystal component, corrected absorption cross-section.
+  </ul>
+</ul>
+  <li><b>Core and libs:</b>
+  <ul>
+    <li><b>3.1 only:</b> Previously, any component present in a McXtrace instrument would trigger the transformation of
+    every photon to its local coordinate system, even in the case of an Arm() (empty TRACE) without
+    an EXTEND block. We now instead detect components with an empty TRACE that have no EXTEND block
+    and are able to completely skip these in the calculation. This results in a speedup in case of
+    instruments with many "empty" components.
+    Thanks to Mads Bertelsen (ESS) for investigating the problem and finding a good solution.
+    <li><b>3.1 only:</b> A new syntax called SHELL has been added to the grammar, allowing users to run a system command
+    prior to code-generation. This may for instance be used to generate an instrument-snippet that
+    you may %include in the instrument (think for-loops of an assembly of identical components).
+    One could also imagine compilation of a needed library, wget of a data file etc.
+    The synax is SHELL "command-to-execute" and it should be placed directly after a DEPENDENCY line
+    within an instrument or component. We expect that applications and examples will come in the
+    next couple of releases.
+    <li><b>3.1 only:</b> Components may from McXtrace 3.1 request USERVARS that become part of the particle struct.
+    (For the time being only in the form of basic C types like double, int etc. and corresponding
+    arrays / pointers.) This will mean that e.g. the optimisations in Single_crystal and PowderN
+    in SPLIT scenarios can be introduced also in GPU settings.
+    <li>A flaw was spotted in our NeXus implementation in the case of event lists: A small chunk-size
+   of (1,6) was used, leading to slow I/O and lots of
+    size-overhead. Thanks to Simon Heybrock (ESS) for spotting this!
+  </ul>
+</ul>
+
+<p><b>Platforms:</b><br>
+We still support 64bit Windows 10/11 on Intel, all recent 64bit macOS
+including 11.x - 13.x Monterey on both Intel and Apple Silicon/M1
+processors. Debian/Ubuntu-based distros on Intel and Arm, our
+RPM-based distro is Fedora on Intel. (Official support for CentOS has
+been dropped, but you should be able to "roll your own" from the src packages.)
+
+<p>Our Docker and binder containers will be updated within the
+following weeks.
+
+<p>We hope you will enjoy these new releases!!!
 
 <hr>
 <a name="macOS 13 Ventura"></a><h3>macOS 13 Ventura</h3>
@@ -48,7 +180,7 @@ tools of McXtrace 1.7 / 3.0 and /Application bundles may not work after the upgr
   (e.g. run mcxtrace-3.0-environment, /Applications/McXtrace-3.0-environment.command or
   /Applications/McXtrace-3.0.app/Contents/Resources/mcxtrace/3.0/environment)
   <li>Issue the command <pre>export PATH=$MCXTRACE/miniconda3/bin:$PATH</pre>
-  <li>Next, you may issue the mcgui command<pre>mcgui</pre>
+  <li>Next, you may issue the mxgui command<pre>mxgui</pre>
 </ul>
 <p>New releases 1.7.1 and 3.1 are in preparation and should be
 released during November or December.
