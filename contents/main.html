@@ -25,7 +25,7 @@ height="44px" valign="center"/></a>
   <li> For installation instructions&nbsp;:</li>
   <ul>
     <li><a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace-1.x">McXtrace 1.7.1 installation</a></li>
-    <li><a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace-3.x">McXtrace 3.1 installation</a></li>
+    <li><a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace-3.x">McXtrace 3.2 installation</a></li>
   </ul>
   <li> For a quick list of the available commands: <a href="documentation/commands">commands</a></li>
 </ul>
@@ -38,22 +38,21 @@ The latest McXtrace news.
 <p><strong><font color="green">Migrating from McXtrace 1.x to 3.x? - <a
 href="https://github.com/McStasMcXtrace/McCode/wiki">Use the wiki-based guides<a></font></strong>
 <hr>
-<a name="2022 releases"></a><h3>McXtrace 1.7.1 and McXtrace 3.1 released</h3>
-[16/12/2022]Dear all, A new PAIR of releases of McXtrace:<br>
+<a name="3.2 release"></a><h3>McXtrace 3.2 released</h3>
+[06/07/2022]Dear all, The new 3.2 release of McXtrace is now out:<br>
 <br>
-McXtrace "classic" v. 1.7.1 <br>
-McXtrace "next-generation", v. 3.1 <br>
-are both built and ready for download! <br>
-<p>Download and installation instructions are available via our <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">GitHub INSTALL-doc pages</a>.
+McXtrace "next-generation", v. 3.2 is built and ready for download! <br>
+<p>Download and installation instructions are available via our <a
+href="https://github.com/McStasMcXtrace/McCode/blob/master/INSTALL-McXtrace-3.x/README.md">GitHub
+INSTALL-doc pages</a>.
 
 <p>Selected highligts from the releases are listed below. The full
 list of changes for both releases is also available at our  <a
 href="https://github.com/McStasMcXtrace/McCode/tree/master/CHANGES_McXtrace">CHANGES_McXtrace</a> document
 
-<p>Please start your migration to 3.x:
+<p><STRONG>!!! Please start your migration to 3.x: !!!</STRONG
 
-<p>McXtrace 1.7.1 is very likely the "last update" to the 1.x series,
-sharing a subset of tool features with McXtrace 3.1. The Wiki has a
+<p>The earlier McXtrace 1.7.1 was the "finals update" to the 1.x series, sharing a subset of tool features with McXtrace 3.1. The Wiki has a
 <a href="https://github.com/McStasMcXtrace/McCode/wiki#migrating-from-mcstas-2x-to-3x-and-mcxtrace-1x-to-3x">dedicated section on McXtrace 1.x -> McXtrace 3.x conversion</a> that
 includes:
 <ul>
@@ -67,313 +66,88 @@ includes:
 email to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>
 
 <p><b>Release highligts</b><br>
-(!!<b>3.1 only</b> denotes features or improvements that are 3.1 specific!!)
 <ul>
-  <li><b>Documentation & guides:</b>
+  <li>McXtrace 3.2 is the third official release in the 3.x series, with a modernised code-generator and support for GPU acceleration on NVIDIA cards.
+
+  <li>Thanks to all members of the joint McStas-McXtrace team, you guys ROCK!
+
+  <li>Fixes of issues from last 3.x release:
   <ul>
-    <li>The component pages now include an extra column in the parameter-table. When filling in
-   this column with wanted values, plus filling the entry-boxes for AT, ROTATED and instance
-   name, pressing "Generate" will put a code-snipet for your component instance directly on
-   your computer clipboard, for easy transfer to the mxgui editor or any other editor of choice!
-    <li>mxdoc has been made "less picky" wrt. component and instrument structure for a more robust
-   experience.
-    <li>mxgui has a new "Docs" button for easier access to the generated mxdoc pages (that give easy
-   access to components, instruments, manuals, datafiles and more.
+    <li>A large number of issues from 3.1 were addressed, see the <a href="https://github.com/McStasMcXtrace/McCode/issues?q=is%3Aissue+is%3Aclosed+label%3Amcxtrace-3.1">relevant GitHub issues</a> for details
   </ul>
-  <li><b>Interoperability with other codes:</b>
+  <li>Documentation & guides:
   <ul>
-    <li>We have worked on the interface with MCPL (v. 1.6.1 included) and a mechanism was developed
-    to automatically detect its location using the mcpl-config util.
-    In practice this happens prior/during to the code-generation step, see below under mxrun.
-    Thanks to Thomas Kittelmann (ESS) for your help in this area.
+    <li>Inline component documentation has been given an overhaul, most component doc pages should now render in a meaningful way
   </ul>
-  <li><b>Tools:</b>
+  <li>Installation:
   <ul>
-    <li>mxrun has a new solution to support 3 new keywords CMD(), ENV() and GETPATH() through the
-   DEPENDENCY line as collected by the code-generator. (see CHANGES
-    doc for more details)
-    <li>As mentioned above, mxdoc has been made "less picky" wrt. component
-    and instrument structure and enriched with JavaScript for easy
-    transfer of information to you editor.
-    <li>mxplot(-pyqtgraph) has received a nice update with an infobar at the bottom of the window.
-    The infobar is updated with coordinates of the cursor on the active plot, meaning that you
-    can easily determine the coordinates of e.g. a peak. The code has also received a number of
-    bugfixes relating to colorbars, the order of monitor output in overviews etc.
-    Thanks to Tobias Weber (ILL) for your work on mxplot.
-    <li><b>3.1 only:</b> The new mxdisplay-cad variant has come along, and is currently included in the form of a
-    technology-preview. The code uses the Python module cadquery (https://github.com/CadQuery/cadquery)
-    and is able to write e.g. STEP or STL output. For now, resolving the required dependencies is
-    left to the user, but we foresee that this tool will mature over the coming releases.
-    Thanks to Greg Tyler (ESS) for contributing this tool.
+    <li>As usual, our install docs are available on the <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">McCode GitHub page</a>
+    <li>The meta-packages for Debian/Ubuntu and Fedora are named e.g.
+    mcxtrace-suite-python-ng 'next generation' for 3.x and mcxtrace-suite-python
+    for the 1.x series packages.
+    <li>OpenACC GPU (and CPU multicore) acceleration is at the time of release still ONLY
+    supported on Linux systems, as this is the only platform targeted by the NVIDIA
+    HPC package. Versions 20.x-23.x should all work. On Windows 64bit systems,
+    support is expected to arrive "later", but you may run on your GPU via the so-called
+    "Windows Subsystem for Linux" (WSL). macOS is unfortunately not supported
+    by NVIDIA HPC acceleration.
+    <li>McXtrace 3.2 enables further components and instruments GPU. Effectively all functionality has
+    been ported to 3.x.
   </ul>
-  <li><b>Components and Instruments:</b>
+  <li>Interoperability with other codes:
   <ul>
-    <li><b>3.1 only:</b> Most of the standard monitors will now fill in their own "instance name" as filename in case
-    a filename was not defined. A small but very useful convenience.
-    <li>The Isotropic_Sqw sample which can be used to model structure and dynamics in isotropic
-   materials, such as powders and liquids has been added. The component is developed by
-   Emmanuel Farhi and also exists in the McStas code. The component is currently in
-   "Experimental" state in McXtrace.
-    <li>Multiple new SOLEIL instruments have been added, thanks to lots of work from Antoine Pado,
-    Stephane Bac and Emmanuel Farhi:
+    <li>McXtrace now ships with a "python-aware" code generator for
+    generating "McStasScript" code, example:
     <ul>
-      <li>SOLEIL_ANATOMIX.instr tomography beam-line
-      <li>SOLEIL_DISCO.instr in the imaging mode
-      <li>SOLEIL_MARS.instr in the XRD mode
-      <li>SOLEIL_PX2a.instr protein crystallography beam-line
+      <li><code>mcxtrace-pygen Instrument.instr</code> --> generates
+      <code>Instrument_generated.py</code>
     </ul>
-    <li>The AstroX toolbox for simulating X-ray telescopes has been included as a special component
-    category.<b>3.1 only:</b> GPU support in the related components/instruments is newly developed and likely not
-    perfect in all cases.
-    <li>Lens_elliptical.comp fixed
-    <li>Grating_reflect.comp fixed, and created a test for it.
-    <li>Udated/fixed Mirror_elliptic.comp and created a test for it.
-    <li>Beamline ssrl 11-2 (in it's unfocused and uncollimated mode) added (related to work done on glitches). 
-    <li>Czerny_Turner instrument created.
-    <li>Single_crystal component, corrected absorption cross-section.
+    <li>Using 'jupytext' this file may easily be converted to a
+    notebook:
+    <ul>
+      <li><code>jupytext --to ipynb Instrument_generated.py</code> -->
+      generates <code>Instrument_generated.ipynb</code>
+    </ul>
+    <li>See <a href="https://github.com/PaNOSC-ViNYL/McStasScript">https://github.com/PaNOSC-ViNYL/McStasScript</a>
+    for more information on McStasScript, that also works for X-rays
+    even though being labed McStas for our "neutron sibling".
+    <li>Thanks to the work of José Robledo (FZJ), we now have a better interface to the Small-Angle Scattering
+    models from SASview, aka. SASmodels. <br>Due to the big number of included models that each correspond
+    to a McXtrace component, these are now found in the "sasmodels" folder of your McXtrace installation.
   </ul>
-</ul>
-  <li><b>Core and libs:</b>
+  <li>Tools:
   <ul>
-    <li><b>3.1 only:</b> Previously, any component present in a McXtrace instrument would trigger the transformation of
-    every photon to its local coordinate system, even in the case of an Arm() (empty TRACE) without
-    an EXTEND block. We now instead detect components with an empty TRACE that have no EXTEND block
-    and are able to completely skip these in the calculation. This results in a speedup in case of
-    instruments with many "empty" components.
-    Thanks to Mads Bertelsen (ESS) for investigating the problem and finding a good solution.
-    <li><b>3.1 only:</b> A new syntax called SHELL has been added to the grammar, allowing users to run a system command
-    prior to code-generation. This may for instance be used to generate an instrument-snippet that
-    you may %include in the instrument (think for-loops of an assembly of identical components).
-    One could also imagine compilation of a needed library, wget of a data file etc.
-    The synax is SHELL "command-to-execute" and it should be placed directly after a DEPENDENCY line
-    within an instrument or component. We expect that applications and examples will come in the
-    next couple of releases.
-    <li><b>3.1 only:</b> Components may from McXtrace 3.1 request USERVARS that become part of the particle struct.
-    (For the time being only in the form of basic C types like double, int etc. and corresponding
-    arrays / pointers.) This will mean that e.g. the optimisations in Single_crystal and PowderN
-    in SPLIT scenarios can be introduced also in GPU settings.
-    <li>A flaw was spotted in our NeXus implementation in the case of event lists: A small chunk-size
-   of (1,6) was used, leading to slow I/O and lots of
-    size-overhead. Thanks to Simon Heybrock (ESS) for spotting this!
+    <li>mxplot (-pyqtgraph) has received a couple of bugfixes relating to plotting in log-mode.
+    <li>mxrun has now a number of --optimize options to Optimize beam-line parameters. Specify min,max or min,start,max for parameters to vary. the default optimizer is Powell from SciPy. You may choose the monitor to optimize, or all. Use mxrun -h for more help.
+    <li>mxgui Run dialogue now allows to Optimize beam-line parameters. Specify min,max or min,start,max for parameters to vary. the default optimizer is Powell from SciPy. You may choose the monitor to optimize, or all.
+  </ul>
+
+  <li>Components and Instruments:
+  <ul>
+    <li>As mentioned above, SASmodels now come in the form of 94 (!) components in the sasmodels folder.
+    <li>The Isotropic_Sqw sample by Emmanuel Farhi has received a number of updates.
+    <li>The Fluorescence sample by Emmanuel Farhi has received a number of updates.
+    <li>PowderN and Single_crystal may now use material definition from a CIF file, calls the cif2hkl tool behind the scenes, work done by Emmanuel Farhi.
+    <li>New instrument SOLEIL_CASSIOPEE.instr from Emmanuel Farhi.
+    <li> Many updates to SOLEIL_ instruments.
+  </ul>
+  <li>Core simulation framework / code-generator:
+  <ul>
+    <li>McXtrace will now issue a warning if you generate GROUPS of a single component, as this may
+   lead to unphysical results. (GROUPS are intended for 2 or more components in an "exclusive-or"
+    setup.
+  </ul>
+<li>Platforms:
+  <ul>
+    <li>We still support 64bit Windows 10/11 on Intel, all recent 64bit macOS including 13.0 Ventura and later
+    on both Intel and Apple Silicon/M1 processors. Debian-based distros on Intel and Arm, Fedora on Intel.
+    <li>On macOS and Windows we now bundle a Mambaforge Python with the installation.
   </ul>
 </ul>
-
-<p><b>Platforms:</b><br>
-We still support 64bit Windows 10/11 on Intel, all recent 64bit macOS
-including 11.x - 13.x Monterey on both Intel and Apple Silicon/M1
-processors. Debian/Ubuntu-based distros on Intel and Arm, our
-RPM-based distro is Fedora on Intel. (Official support for CentOS has
-been dropped, but you should be able to "roll your own" from the src packages.)
-
-<p>Our Docker and binder containers will be updated within the
-following weeks.
-
-<p>We hope you will enjoy these new releases!!!
-
-<hr>
-<a name="macOS 13 Ventura"></a><h3>macOS 13 Ventura</h3>
-<p>Dear all,
-<p>If you upgrade to macOS 13 Ventura (intel/x86_64), your already installed Python
-tools of McXtrace 1.7 / 3.0 and /Application bundles may not work after the upgrade.
-<p>A workaround is to:
-<ul>
-  <li>In a terminal, start your "McXtrace shell"
-  (e.g. run mcxtrace-3.0-environment, /Applications/McXtrace-3.0-environment.command or
-  /Applications/McXtrace-3.0.app/Contents/Resources/mcxtrace/3.0/environment)
-  <li>Issue the command <pre>export PATH=$MCXTRACE/miniconda3/bin:$PATH</pre>
-  <li>Next, you may issue the mxgui command<pre>mxgui</pre>
-</ul>
-<p>New releases 1.7.1 and 3.1 are in preparation and should be
-released during November or December.
-<hr>
-<a name="more Python 3.10 issues"></a><h3>another Python 3.10 / pyqtgraph issue in current releases</h3>
-<p>[01/11/2022] Dear all,
-<p>Several users have reported "yet another Python issue" that arise
-in current releases of McXtrace (1.7 / 3.0). After following the
-advice from September 23rd to replace mxgui/viewclasses.py and
-mccodelib/pqtgfrontend.py, mxplot-pyqtgraph fails with
-<pre>
-mxplot error: scale(self): too many arguments
-Traceback (most recent call last):
-File "C:\mcxtrace-1.7\lib\tools\Python\mxplot\pyqtgraph\mcplot.py", line 67, in 
-main(args)
-File "C:\mcxtrace-1.7\lib\tools\Python\mxplot\pyqtgraph\mcplot.py", line 57, in main
-raise e
-File "C:\mcxtrace-1.7\lib\tools\Python\mxplot\pyqtgraph\mcplot.py", line 51, in main
-plotter.runplot()
-File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph....\mccodelib\pqtgfrontend.py", line 62, in runplot
-plot_node(node, self.plot_func, plt_layout, viewmodel)
-File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph....\mccodelib\pqtgfrontend.py", line 144, in plot_node
-viewbox_lst.append(add_plot(layout, node, plot_func, i, n, viewmodel))
-File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph....\mccodelib\pqtgfrontend.py", line 382, in add_plot
-view_box, plt_itm = plot_node_func(node, i, plt, options)
-File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph\plotfuncs.py", line 33, in plot
-view_box, lyt = plot_Data2D(data, plt, log=opts['log'], legend=opts['legend'], icolormap=opts['icolormap'],
-File "C:\mcxtrace-1.7\lib\tools\Python\mcplot\pyqtgraph\plotfuncs.py", line 203, in plot_Data2D
-img.scale(dx,dy)
-TypeError: scale(self): too many arguments'
-</pre>
-To fix this issue, please replace your
-<ul> 
-  <li>$MCXTRACE/tools/Python/mcplot/pyqtgraph/plotfuncs.py with <a
-  href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/54c348b02fb20c6182866edd8ecd10096f7c25db/tools/Python/mcplot/pyqtgraph/plotfuncs.py">this new version</a>
-</ul>
-<p>New releases 1.7.1 and 3.1 are in preparation and should be released during November or December.
-<hr>
-<a name="Python 3.10 issues"></a><h3>Python 3.10 issues in current releases</h3>
-<p>[23/09/2022] Dear all,
-<p>We have recently become aware of a couple of issues that arise with all current releases of McXtrace (1.7 / 3.0)
-<p>On system with the newest Python versions (3.10 and beyond) you may experience that 
-<ul>
-  <li> mxgui fails on execution, see <a href="https://github.com/McStasMcXtrace/McCode/issues/1270">https://github.com/McStasMcXtrace/McCode/issues/1270</a> for details
-  <li> mxplot fails on execution, see <a href="https://github.com/McStasMcXtrace/McCode/issues/1281">https://github.com/McStasMcXtrace/McCode/issues/1281</a> for details
-</ul>
-<p>In case you experience these problems you may replace the following files within your installation folder:
-<ul>
-  <li>$MCXTRACE/tools/Python/mxgui/viewclasses.py - please replace by <a
-  href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/d30a2567dd77d0e1880c2020cc17ef6c5cdf3078/tools/Python/mcgui/viewclasses.py">this new version</a>
-  <li>$MCXTRACE/tools/Python/mccodelib/pqtgfrontend.py - please replace
-  by <a
-  href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/54c348b02fb20c6182866edd8ecd10096f7c25db/tools/Python/mccodelib/pqtgfrontend.py">this
-  new version</a>
-</ul>
-<p>New stable releases of McXtrace should be released during November/December this year.
-
-<p>Best and sorry for the inconvenience,
-
-<p>Peter Willendrup
-
-<hr>
-<a name="New ready-to-run McXtrace box in a browser"></a> <h3>New ready-to-run McXtrace box in a browser</h3>
-<p>[18/02/2022] Dear all, we are happy to provide a <a href="https://github.com/McStasMcXtrace/mcxtrace-binder">ready-to-run system with McXtrace pre-installed</a>. 
-It typically pulls-out an 8-cores computer running at Binder, for free, with both McXtrace 1.7 and 3.0 (with MPI multi-core support but no GPU).
-Perfect for running McXtrace from anywhere, for training/schools/workshops.
-	
-<p>Start it in a single click here: <a href="https://mybinder.org/v2/gh/McStasMcXtrace/mcxtrace-binder/master?urlpath=desktop"><img src="https://mybinder.org/badge_logo.svg"></a>
-<p>(Please note that load-time can be a couple of minutes.)
-<p><a target=_blank href="/files/mcxtrace-binder.png"><img width=350 alt="screenshot" src="/files/mcxtrace-binder.png"></a>
-<p><h3>Update:</h3>
-The above docker image has been pushed to dockerhub and can also be run locally at your machine using docker:
-<ul>
-  <li>Install docker (if needed)
-  <li><pre>docker run -p 8888:8888 docker.io/mccode/mcxtrace-1.7-3.0:1.0</pre>
-  <li>Connect your browser to the URL communicated by the docker command
-</ul>
-<hr>
-<a name="Updated RPM metapackages for McXtrace 3.0"></a> <h3>Updated RPM metapackages for McXtrace 3.0</h3>
-<p>[09/02/2022] Dear all,
-<p>If you were fast enough to try out installing McXtrace 3.0 already
-yesterday on your CentOS or Fedora system, you may have come across
-some installation issues, as the mcxtrace-suite-python-ng packages had
-a couple of shortcomings.
-<p>Updated packages have now been uploaded, please use yum clean and
-yum reinstall to have access to the updates.
-	
-<hr>
-<a name="McXtrace 3.0 is released"></a> <h3>McXtrace 3.0 is released</h3>
-<p>[08/02/2022] Dear all,
-
-<p>The McXtrace team is happy to announce that our McXtrace 3.0 "next generation" release is now available.
-
-<p>McXtrace 3.0 is the first release in the 3.0 series with a completely rewritten code-generator and thereby
-support for GPU-acceleration through the OpenACC programming model. 
-
-<p>We have seen speedups of 1-2 orders of magnitude over the CPU version, depending on the computational
-Problem / complexity.
-
-<p>THANKS:
-<ul>
-  <li>Thanks to: all members of the team (and also to the McStas team), for pulling together to make this possible.
-  <li>Thanks to the mentors at the GPU Hackathons that really made this happen
-  <li>Thanks to NVIDIA for making the hackathons happen
-</ul>
-
-<p>INSTALLATION:
-<ul>
-  <li>Installation instructions for McXtrace-3.0 and support libraries
-  may be found on our the <a href="https://github.com/McStasMcXtrace/McCode/tree/master/Install_McXtrace-3.x">McCode github-site</a>
-  <li>OpenACC acceleration is at present available out of the box on Linux. 
-  <li>On windows it is possible to target GPU-acceleration through Windows Subsystem For Linux v2: WSL2. 
-  <li>The present McXtrace-3.0 implementation relies the concept managed memory, which
-  is at the time of writing only supported by the Linux version of the NVHPC-kit
-  (downloadable from <a href="https://developer.nvidia.com/hpc-sdk">https://developer.nvidia.com/hpc-sdk</a>)
-</ul>
-
-<p>For more information on the GPU-features of the release, please
-consult the <a
-href="https://github.com/McStasMcXtrace/McCode/blob/mcxtrace-3.0-release/CHANGES_McXtrace">CHANGES_McXtrace
-document on GitHub</a> and the section <a
-href="https://github.com/McStasMcXtrace/McCode/wiki">"Migrating from
-McStas 2.x to 3.x (and McXtrace 1.x to 3.x)" in our McCode wiki</a>
-
-<p>
-Happy simulation!
-
-<p><center><img src="/mcxtrace_1.png" height="88"><img src="/files/NVLogo_2D.jpg" height="88"><img src="/files/OpenACC-logo.png" height="88"></center>
-
-<hr>
-<a name="McXtrace 1.7 is released"></a> <h3> McXtrace 1.7 is released</h3>
-[25/01/2022] Dear simulators,
-The team is happy to announce that McXtrace 1.7 is out! 
-<p>
-1.7 has been focused mainly on stability and bugfixes, but also provides a set of new features.
-Binary packages are provided for the main platforms: Debian /Ubuntu, Fedora, Windows 10, Mac OSX (arm and intel based).
-As is the presenty custom, see  <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace</a> for speecific installation instructions for you platform.
-<p>
-Please also keep an eye out for the for upcoming release of McXtrace 3.0, which is a technology preview release of an improved code-generator enabling McXtrace to run on GPUs.
-<p>
-Happy simulation!
-
-<p>
-<b>CHANGES in McXtrace 1.7</b>
-<ol>
-<li> Improved installation scripts
-   <ol>
-        <li>Installs cleanly on Mac silicon 
-   </ol>
-<li> Updated examples:
-   <ol>
-        <li> MAXIV_DanMAX_pxrd1d.instr
-        <li> MAXIV_DanMAX_pxrd2d.instr
-   </ol>
-<li> New examples:
-   <ol>
-       <li> SOLEIL ROCK beamline.
-        <li>ESRF BM29 skeleton beamline.
-        <li>Example of Air-scattering block.
-        <li>Test example for the GROUP langnuage feature
-        <li>Union demo test example
-        <li>New Example of Compton scattering union process.
-   </ol>
-<li> Updated Components
-   <ol>
-        <li>PowderN.comp: Fix bug with faulty packing factor logic, which lead to wrong intensities when used with SPLIT.
-	<li>Lens_parab_Cyl_rough.comp, Lens_parab_rough.comp, Lens_Kinoform.comp: documentation issues
-	<li>Mirror.comp: documentation update
-	<li>Mirror_curved.comp, Mirror_elliptic.comp: Use reflectivity library
-	<li>Mirror_toroid.comp: Fix for stable handling of reflectivity file
-	<li>Absorption_sample.comp: Fix inner/outer volume logic 
-	<li>Source_genesis13.comp, Source_simplex.comp: Documentation issues.
-        <li>Air.comp: Correct scattering amplitude.
-        <li>New: Laue_crystal_BC.comp: experimental model of a Laue crystal available for testing.
-   </ol>
-<li> Updated libraries:
-   <ol>
-        <li>Reflectivity-lib has a series of bugfixes. 
-   </ol>
-<li> New tools:
-   <ol>
-        <li>Test tool for component writers' convenience.
-        <li>Scripts for generating reflectivity files.
-   </ol>
-<li> License change:
-        The release includes a switch to the GPLv3-license for McXtrace. The underlying reason for this 
-        is to help collaboration wih the Debian project.
-</ol>
-
+We hope you will enjoy this new release!!!
 <hr>
 
-<a href="/news/2021.html">2021</a>, <a href="/news/old_news.html">2020
+<a href="/news/2022.html">2022</a>, <a href="/news/2021.html">2021</a>, <a href="/news/old_news.html">2020
 and older News</a>
 
 <a href="mailto:webmaster@mcxtrace.org" class="external free" title="mailto:webmaster@mcxtrace.org" rel="nofollow">mailto:webmaster@mcxtrace.org</a>
