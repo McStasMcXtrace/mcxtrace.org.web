@@ -38,6 +38,21 @@ The latest McXtrace news.
 <p><strong><font color="green">Migrating from McXtrace 1.x to 3.x? - <a
 href="https://github.com/McStasMcXtrace/McCode/wiki">Use the wiki-based guides<a></font></strong>
 <hr>
+<a name="3.2 bugfix"></a><h3>McXtrace 3.2 quick mxdoc bugfix</h3>
+[07/07/2022]Dear all, a minor annoyaince in the 3.2 release of
+McXtrace has been found:<br>
+Many of the component information headers will not render correctly in
+mxdoc / the html documentation.<br>
+To fix the problem locally on your machine, please:
+<ol>
+  <li>Replace your McXtrace 3.2 
+  <code>$MCXTRACE/tools/Python/mccodelib/utils.py</code> by the one
+  available on <a href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/a51267381588b8c29fd06e89d436a1d0d40341ca/tools/Python/mccodelib/utils.py">mccode-3 on GitHub</a>
+  <li>Run <code>mxdoc -i</code> (with needed admin credentials if
+  needed, command replaces the html files in <code>$MCXTRACE</code>
+</ol>
+A fresh McXtrace release will be spun out later in the summer or early fall.
+<hr>
 <a name="3.2 release"></a><h3>McXtrace 3.2 released</h3>
 [06/07/2022]Dear all, The new 3.2 release of McXtrace is now out:<br>
 <br>
