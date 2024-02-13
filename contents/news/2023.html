@@ -1,0 +1,128 @@
+<a name="3.2 bugfix"></a><h3>McXtrace 3.2 quick mxdoc bugfix</h3>
+[07/07/2022]Dear all, a minor annoyance in the 3.2 release of
+McXtrace has been found:<br>
+Many of the component information headers will not render correctly in
+mxdoc / the html documentation.<br>
+To fix the problem locally on your machine, please:
+<ol>
+  <li>Replace your McXtrace 3.2 
+  <code>$MCXTRACE/tools/Python/mccodelib/utils.py</code> by the one
+  available on <a href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/a51267381588b8c29fd06e89d436a1d0d40341ca/tools/Python/mccodelib/utils.py">mccode-3 on GitHub</a>
+  <li>Run <code>mxdoc -i</code> (with needed admin credentials if
+  needed, command replaces the html files in <code>$MCXTRACE</code>
+</ol>
+A fresh McXtrace release will be spun out later in the summer or early fall.
+<hr>
+<a name="3.2 release"></a><h3>McXtrace 3.2 released</h3>
+[06/07/2022]Dear all, The new 3.2 release of McXtrace is now out:<br>
+<br>
+McXtrace "next-generation", v. 3.2 is built and ready for download! <br>
+<p>Download and installation instructions are available via our <a
+href="https://github.com/McStasMcXtrace/McCode/blob/master/INSTALL-McXtrace-3.x/README.md">GitHub
+INSTALL-doc pages</a>.
+
+<p>Selected highligts from the releases are listed below. The full
+list of changes for both releases is also available at our  <a
+href="https://github.com/McStasMcXtrace/McCode/tree/master/CHANGES_McXtrace">CHANGES_McXtrace</a> document
+
+<p><STRONG>!!! Please start your migration to 3.x: !!!</STRONG
+
+<p>The earlier McXtrace 1.7.1 was the "finals update" to the 1.x series, sharing a subset of tool features with McXtrace 3.1. The Wiki has a
+<a href="https://github.com/McStasMcXtrace/McCode/wiki#migrating-from-mcstas-2x-to-3x-and-mcxtrace-1x-to-3x">dedicated section on McXtrace 1.x -> McXtrace 3.x conversion</a> that
+includes:
+<ul>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">An overview of differences</a>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/McStas-McXtrace-3-and-GPU-terminology-%28table%29">A nomenclature list containing short descriptions of new concepts and important keywords in McXtrace 3.x</a> and OpenACC / CUDA code in general.
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">A document outlining the most importand differences between 1.x and 3.x.</a>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-instrument-for-use-under-McStas-3">A guide for 1.x -> 3.x instrument conversion.</a>
+  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-component-for-use-under-McStas-3">A guide for 2.x -> 3.x component conversion.</a>
+</ul>
+<p>- If you are still in trouble, please write us a GitHub issue or an
+email to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>
+
+<p><b>Release highligts</b><br>
+<ul>
+  <li>McXtrace 3.2 is the third official release in the 3.x series, with a modernised code-generator and support for GPU acceleration on NVIDIA cards.
+
+  <li>Thanks to all members of the joint McStas-McXtrace team, you guys ROCK!
+
+  <li>Fixes of issues from last 3.x release:
+  <ul>
+    <li>A large number of issues from 3.1 were addressed, see the <a href="https://github.com/McStasMcXtrace/McCode/issues?q=is%3Aissue+is%3Aclosed+label%3Amcxtrace-3.1">relevant GitHub issues</a> for details
+  </ul>
+  <li>Documentation & guides:
+  <ul>
+    <li>Inline component documentation has been given an overhaul, most component doc pages should now render in a meaningful way
+  </ul>
+  <li>Installation:
+  <ul>
+    <li>As usual, our install docs are available on the <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">McCode GitHub page</a>
+    <li>The meta-packages for Debian/Ubuntu and Fedora are named e.g.
+    mcxtrace-suite-python-ng 'next generation' for 3.x and mcxtrace-suite-python
+    for the 1.x series packages.
+    <li>OpenACC GPU (and CPU multicore) acceleration is at the time of release still ONLY
+    supported on Linux systems, as this is the only platform targeted by the NVIDIA
+    HPC package. Versions 20.x-23.x should all work. On Windows 64bit systems,
+    support is expected to arrive "later", but you may run on your GPU via the so-called
+    "Windows Subsystem for Linux" (WSL). macOS is unfortunately not supported
+    by NVIDIA HPC acceleration.
+    <li>McXtrace 3.2 enables further components and instruments GPU. Effectively all functionality has
+    been ported to 3.x.
+  </ul>
+  <li>Interoperability with other codes:
+  <ul>
+    <li>McXtrace now ships with a "python-aware" code generator for
+    generating "McStasScript" code, example:
+    <ul>
+      <li><code>mcxtrace-pygen Instrument.instr</code> --> generates
+      <code>Instrument_generated.py</code>
+    </ul>
+    <li>Using 'jupytext' this file may easily be converted to a
+    notebook:
+    <ul>
+      <li><code>jupytext --to ipynb Instrument_generated.py</code> -->
+      generates <code>Instrument_generated.ipynb</code>
+    </ul>
+    <li>See <a href="https://github.com/PaNOSC-ViNYL/McStasScript">https://github.com/PaNOSC-ViNYL/McStasScript</a>
+    for more information on McStasScript, that also works for X-rays
+    even though being labed McStas for our "neutron sibling".
+    <li>Thanks to the work of José Robledo (FZJ), we now have a better interface to the Small-Angle Scattering
+    models from SASview, aka. SASmodels. <br>Due to the big number of included models that each correspond
+    to a McXtrace component, these are now found in the "sasmodels" folder of your McXtrace installation.
+  </ul>
+  <li>Tools:
+  <ul>
+    <li>mxplot (-pyqtgraph) has received a couple of bugfixes relating to plotting in log-mode.
+    <li>mxrun has now a number of --optimize options to Optimize beam-line parameters. Specify min,max or min,start,max for parameters to vary. the default optimizer is Powell from SciPy. You may choose the monitor to optimize, or all. Use mxrun -h for more help.
+    <li>mxgui Run dialogue now allows to Optimize beam-line parameters. Specify min,max or min,start,max for parameters to vary. the default optimizer is Powell from SciPy. You may choose the monitor to optimize, or all.
+  </ul>
+
+  <li>Components and Instruments:
+  <ul>
+    <li>As mentioned above, SASmodels now come in the form of 94 (!) components in the sasmodels folder.
+    <li>The Isotropic_Sqw sample by Emmanuel Farhi has received a number of updates.
+    <li>The Fluorescence sample by Emmanuel Farhi has received a number of updates.
+    <li>PowderN and Single_crystal may now use material definition from a CIF file, calls the cif2hkl tool behind the scenes, work done by Emmanuel Farhi.
+    <li>New instrument SOLEIL_CASSIOPEE.instr from Emmanuel Farhi.
+    <li> Many updates to SOLEIL_ instruments.
+  </ul>
+  <li>Core simulation framework / code-generator:
+  <ul>
+    <li>McXtrace will now issue a warning if you generate GROUPS of a single component, as this may
+   lead to unphysical results. (GROUPS are intended for 2 or more components in an "exclusive-or"
+    setup.
+  </ul>
+<li>Platforms:
+  <ul>
+    <li>We still support 64bit Windows 10/11 on Intel, all recent 64bit macOS including 13.0 Ventura and later
+    on both Intel and Apple Silicon/M1 processors. Debian-based distros on Intel and Arm, Fedora on Intel.
+    <li>On macOS and Windows we now bundle a Mambaforge Python with the installation.
+  </ul>
+</ul>
+We hope you will enjoy this new release!!!
+<hr>
+
+<a href="/news/2022.html">2022</a>, <a href="/news/2021.html">2021</a>, <a href="/news/old_news.html">2020
+and older News</a>
+
+<a href="mailto:webmaster@mcxtrace.org" class="external free" title="mailto:webmaster@mcxtrace.org" rel="nofollow">mailto:webmaster@mcxtrace.org</a>
