@@ -37,6 +37,37 @@ The latest McXtrace news.
 
 <p><strong><font color="green">Migrating from McXtrace 1.x to 3.x? - <a
 href="https://github.com/McStasMcXtrace/McCode/wiki">Use the wiki-based guides<a></font></strong>
+<a name="Release previews"></a><h3>May 16th, 2024: (experimental) previews of the forthcoming 3.5-release</h2>
+<p>Dear all,
+<p>If you want a sneak preview at the forthcoming 3.5-release (see
+below for explantion of version-"jump"), we recommend you
+to try either
+<ul>
+  <li>Our <a href="https://github.com/conda-forge/mcxtrace-suite-feedstock/">conda-forge packages</a>
+  <br>(NB: The Windows version of the package does <strong>not</strong> include MCPL and NCrystal yet)
+  <li>A new set of <a href="https://tmp.mcxtrace.org/macOS-conda-apps/">conda-based macOS app bundles</a>
+  <br>(Based on conda-forge and should auto-download the newest conda-package plus dependencies)
+  <li>Corresponding Debian packages, Windows/MinGW package and macOS/Intel package are built on a nightly basis via GitHub action "mcxtrace-autobuild") see e.g. <a href="https://github.com/McStasMcXtrace/McCode/actions/runs/9113129442">this latest one</a><br>(The packages are available in the "artifacts", download may require being logged in on GitHub. Somewhat confusingly, the Windows build is enclosed in the "ubuntu" artifact.)
+</ul>
+<p>Among the hightlights are:
+<ol>
+  <li>New default-<code>CFLAGS</code>
+    <br>(Gives improved simulation performance of ~ 30-40% when using <code>gcc</code> and/or <code>clang</code> on Unix platforms at the cost of 5-10% longer compile time. -
+    <br>Thanks to Thomas Kittelmann for help debugging a slowdown found when using the built-in compilers on conda :-) )
+  <li>Tighter integration with <a href="https://github.com/PaNOSC-ViNYL/McStasScript">McStasScript</a>
+  <br>(<code>mcxtrace-pygen</code>-driven button in <code>mcgui</code> directly spawns JupyterLab with a generated notebook)
+  <li><a href="https://github.com/PaNOSC-ViNYL/McStasScript">McStasScript</a> is automatically included and configured on mac and Windows builds
+  <li>We have started organising the <a href="https://github.com/McStasMcXtrace/McCode/tree/main/mcxtrace-comps/examples">instrument-<code>examples</code></a> in a folder-structure,
+    allowing to distribute "more than just the instrument-file" as an example.
+  <br>(Case-specific datafiles or geometry-files, c-code snippets, python scripts or McStasScript notebooks welcome - we still want new <code>comps</code> to arrive in <code>contrib</code>)
+  <li>New <code>File.comp</code> contribution from Greg Tucker, allows to use <code>metadata</code> blocks to store input-files for components
+  <br>(e.g. for a small OFF file or other datafile - then visible alongside <code>instr</code> in your editor.)
+  <li>... and we are working on freshening up certain aspects of the 3D-visualisation... ;-) <br>(New visualisation is not yet included in the above-mentioned packages...)
+</ol>
+<p><strong>Do you have new component- or instrument-developments you would like included in next release?</strong><br>- Then <strong>NOW</strong> is a good time to send them. :-) We prefer of you open a <a href="https://github.com/McStasMcXtrace/McCode/pulls">PR on GitHub</a> but of course email-based contributions are also welcome. :-)
+<p>Finally, if you know anyone running <a href="https://www.mcstas.org">McStas</a> all
+of the above should also work for them. And going forward, releases of
+McStas and McXtrace should come in pairs with the same versioning.
 <hr>
 <a name="SasView anisotropic issue"></a><h3>Issue with anisotropic SasView models</h3>
 [13/02/2024] Dear all, a bug in the 3.2 release of McXtrace has been found by one of our DTU users.
