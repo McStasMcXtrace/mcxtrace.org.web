@@ -37,6 +37,19 @@ class="mw-headline"> Recent McXtrace News </span></h2>
 href="https://github.com/McStasMcXtrace/McCode/wiki">Use the
 wiki-based guides<a></font></strong>
 <hr>
+<h2>September 17th, 2024: Try the new version in a binder - no
+installation required</h2>
+Here you may access a web-desktop with McStas and McXtrace:
+<ul>
+  <li><a href="https://mybinder.org/v2/gh/McStasMcXtrace/jupyter-remote-desktop-proxy/HEAD?urlpath=desktop">Click here for a Desktop <img src="https://mybinder.org/badge_logo.svg"></a>
+  <li><a href="https://mybinder.org/v2/gh/McStasMcXtrace/jupyter-remote-desktop-proxy/HEAD?urlpath=lab">Click here for a Jupyter <img src="https://mybinder.org/badge_logo.svg"></a>
+</ul>
+Start <pre>mxgui</pre> from a terminal and try everything out:
+<p><a _target=blank href="/files/binder-screenshot-mcxtrace.png"><img width="640" src="/files/binder-screenshot-mcxtrace.png"></a>
+<p>Note that the session is <strong>not persistent</strong>, so using this for actual work is a bad idea. :-)
+<p>Instead you may also use the corresponding Docker container, can be run with<br>
+<pre>podman run -p 8888:8888 -p 5173:5173 docker.io/mccode/mcstas-mcxtrace</pre>
+<hr>
 <h2>September 16th, 2024: McStas and McXtrace 3.5.1 release!</h2>
 <p>Dear all,
 <p>It is finally time for a set of new McStas and McXtrace releases:  v3.5.1!
