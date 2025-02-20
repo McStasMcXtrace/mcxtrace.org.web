@@ -4,24 +4,24 @@
 McXtrace "classic" v. 1.7.1 <br>
 McXtrace "next-generation", v. 3.1 <br>
 are both built and ready for download! <br>
-<p>Download and installation instructions are available via our <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">GitHub INSTALL-doc pages</a>.
+<p>Download and installation instructions are available via our <a href="https://github.com/mccode-dev/McCode/tree/master/INSTALL-McXtrace">GitHub INSTALL-doc pages</a>.
 
 <p>Selected highligts from the releases are listed below. The full
 list of changes for both releases is also available at our  <a
-href="https://github.com/McStasMcXtrace/McCode/tree/master/CHANGES_McXtrace">CHANGES_McXtrace</a> document
+href="https://github.com/mccode-dev/McCode/tree/master/CHANGES_McXtrace">CHANGES_McXtrace</a> document
 
 <p>Please start your migration to 3.x:
 
 <p>McXtrace 1.7.1 is very likely the "last update" to the 1.x series,
 sharing a subset of tool features with McXtrace 3.1. The Wiki has a
-<a href="https://github.com/McStasMcXtrace/McCode/wiki#migrating-from-mcstas-2x-to-3x-and-mcxtrace-1x-to-3x">dedicated section on McXtrace 1.x -> McXtrace 3.x conversion</a> that
+<a href="https://github.com/mccode-dev/McCode/wiki#migrating-from-mcstas-2x-to-3x-and-mcxtrace-1x-to-3x">dedicated section on McXtrace 1.x -> McXtrace 3.x conversion</a> that
 includes:
 <ul>
-  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">An overview of differences</a>
-  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/McStas-McXtrace-3-and-GPU-terminology-%28table%29">A nomenclature list containing short descriptions of new concepts and important keywords in McXtrace 3.x</a> and OpenACC / CUDA code in general.
-  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">A document outlining the most importand differences between 1.x and 3.x.</a>
-  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-instrument-for-use-under-McStas-3">A guide for 1.x -> 3.x instrument conversion.</a>
-  <li><a href="https://github.com/McStasMcXtrace/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-component-for-use-under-McStas-3">A guide for 2.x -> 3.x component conversion.</a>
+  <li><a href="https://github.com/mccode-dev/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">An overview of differences</a>
+  <li><a href="https://github.com/mccode-dev/McCode/wiki/McStas-McXtrace-3-and-GPU-terminology-%28table%29">A nomenclature list containing short descriptions of new concepts and important keywords in McXtrace 3.x</a> and OpenACC / CUDA code in general.
+  <li><a href="https://github.com/mccode-dev/McCode/wiki/Overview-of-differences-in-%22classic-McStas-McXtrace%22-and-the-3.x-versions">A document outlining the most importand differences between 1.x and 3.x.</a>
+  <li><a href="https://github.com/mccode-dev/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-instrument-for-use-under-McStas-3">A guide for 1.x -> 3.x instrument conversion.</a>
+  <li><a href="https://github.com/mccode-dev/McCode/wiki/HOWTO%3A-Modifying-a-McStas-2-component-for-use-under-McStas-3">A guide for 2.x -> 3.x component conversion.</a>
 </ul>
 <p>- If you are still in trouble, please write us a GitHub issue or an
 email to <a href="mailto:mcxtrace-users@mcxtrace.org">mcxtrace-users@mcxtrace.org</a>
@@ -176,7 +176,7 @@ TypeError: scale(self): too many arguments'
 To fix this issue, please replace your
 <ul> 
   <li>$MCXTRACE/tools/Python/mcplot/pyqtgraph/plotfuncs.py with <a
-  href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/54c348b02fb20c6182866edd8ecd10096f7c25db/tools/Python/mcplot/pyqtgraph/plotfuncs.py">this new version</a>
+  href="https://raw.githubusercontent.com/mccode-dev/McCode/54c348b02fb20c6182866edd8ecd10096f7c25db/tools/Python/mcplot/pyqtgraph/plotfuncs.py">this new version</a>
 </ul>
 <p>New releases 1.7.1 and 3.1 are in preparation and should be released during November or December.
 <hr>
@@ -185,16 +185,16 @@ To fix this issue, please replace your
 <p>We have recently become aware of a couple of issues that arise with all current releases of McXtrace (1.7 / 3.0)
 <p>On system with the newest Python versions (3.10 and beyond) you may experience that 
 <ul>
-  <li> mxgui fails on execution, see <a href="https://github.com/McStasMcXtrace/McCode/issues/1270">https://github.com/McStasMcXtrace/McCode/issues/1270</a> for details
-  <li> mxplot fails on execution, see <a href="https://github.com/McStasMcXtrace/McCode/issues/1281">https://github.com/McStasMcXtrace/McCode/issues/1281</a> for details
+  <li> mxgui fails on execution, see <a href="https://github.com/mccode-dev/McCode/issues/1270">https://github.com/mccode-dev/McCode/issues/1270</a> for details
+  <li> mxplot fails on execution, see <a href="https://github.com/mccode-dev/McCode/issues/1281">https://github.com/mccode-dev/McCode/issues/1281</a> for details
 </ul>
 <p>In case you experience these problems you may replace the following files within your installation folder:
 <ul>
   <li>$MCXTRACE/tools/Python/mxgui/viewclasses.py - please replace by <a
-  href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/d30a2567dd77d0e1880c2020cc17ef6c5cdf3078/tools/Python/mcgui/viewclasses.py">this new version</a>
+  href="https://raw.githubusercontent.com/mccode-dev/McCode/d30a2567dd77d0e1880c2020cc17ef6c5cdf3078/tools/Python/mcgui/viewclasses.py">this new version</a>
   <li>$MCXTRACE/tools/Python/mccodelib/pqtgfrontend.py - please replace
   by <a
-  href="https://raw.githubusercontent.com/McStasMcXtrace/McCode/54c348b02fb20c6182866edd8ecd10096f7c25db/tools/Python/mccodelib/pqtgfrontend.py">this
+  href="https://raw.githubusercontent.com/mccode-dev/McCode/54c348b02fb20c6182866edd8ecd10096f7c25db/tools/Python/mccodelib/pqtgfrontend.py">this
   new version</a>
 </ul>
 <p>New stable releases of McXtrace should be released during November/December this year.
@@ -205,11 +205,11 @@ To fix this issue, please replace your
 
 <hr>
 <a name="New ready-to-run McXtrace box in a browser"></a> <h3>New ready-to-run McXtrace box in a browser</h3>
-<p>[18/02/2022] Dear all, we are happy to provide a <a href="https://github.com/McStasMcXtrace/mcxtrace-binder">ready-to-run system with McXtrace pre-installed</a>. 
+<p>[18/02/2022] Dear all, we are happy to provide a <a href="https://github.com/mccode-dev/mcxtrace-binder">ready-to-run system with McXtrace pre-installed</a>. 
 It typically pulls-out an 8-cores computer running at Binder, for free, with both McXtrace 1.7 and 3.0 (with MPI multi-core support but no GPU).
 Perfect for running McXtrace from anywhere, for training/schools/workshops.
 	
-<p>Start it in a single click here: <a href="https://mybinder.org/v2/gh/McStasMcXtrace/mcxtrace-binder/master?urlpath=desktop"><img src="https://mybinder.org/badge_logo.svg"></a>
+<p>Start it in a single click here: <a href="https://mybinder.org/v2/gh/mccode-dev/mcxtrace-binder/master?urlpath=desktop"><img src="https://mybinder.org/badge_logo.svg"></a>
 <p>(Please note that load-time can be a couple of minutes.)
 <p><a target=_blank href="/files/mcxtrace-binder.png"><img width=350 alt="screenshot" src="/files/mcxtrace-binder.png"></a>
 <p><h3>Update:</h3>
@@ -251,7 +251,7 @@ Problem / complexity.
 <p>INSTALLATION:
 <ul>
   <li>Installation instructions for McXtrace-3.0 and support libraries
-  may be found on our the <a href="https://github.com/McStasMcXtrace/McCode/tree/master/Install_McXtrace-3.x">McCode github-site</a>
+  may be found on our the <a href="https://github.com/mccode-dev/McCode/tree/master/Install_McXtrace-3.x">McCode github-site</a>
   <li>OpenACC acceleration is at present available out of the box on Linux. 
   <li>On windows it is possible to target GPU-acceleration through Windows Subsystem For Linux v2: WSL2. 
   <li>The present McXtrace-3.0 implementation relies the concept managed memory, which
@@ -261,9 +261,9 @@ Problem / complexity.
 
 <p>For more information on the GPU-features of the release, please
 consult the <a
-href="https://github.com/McStasMcXtrace/McCode/blob/mcxtrace-3.0-release/CHANGES_McXtrace">CHANGES_McXtrace
+href="https://github.com/mccode-dev/McCode/blob/mcxtrace-3.0-release/CHANGES_McXtrace">CHANGES_McXtrace
 document on GitHub</a> and the section <a
-href="https://github.com/McStasMcXtrace/McCode/wiki">"Migrating from
+href="https://github.com/mccode-dev/McCode/wiki">"Migrating from
 McStas 2.x to 3.x (and McXtrace 1.x to 3.x)" in our McCode wiki</a>
 
 <p>
@@ -278,7 +278,7 @@ The team is happy to announce that McXtrace 1.7 is out!
 <p>
 1.7 has been focused mainly on stability and bugfixes, but also provides a set of new features.
 Binary packages are provided for the main platforms: Debian /Ubuntu, Fedora, Windows 10, Mac OSX (arm and intel based).
-As is the presenty custom, see  <a href="https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace">https://github.com/McStasMcXtrace/McCode/tree/master/INSTALL-McXtrace</a> for speecific installation instructions for you platform.
+As is the presenty custom, see  <a href="https://github.com/mccode-dev/McCode/tree/master/INSTALL-McXtrace">https://github.com/mccode-dev/McCode/tree/master/INSTALL-McXtrace</a> for speecific installation instructions for you platform.
 <p>
 Please also keep an eye out for the for upcoming release of McXtrace 3.0, which is a technology preview release of an improved code-generator enabling McXtrace to run on GPUs.
 <p>
